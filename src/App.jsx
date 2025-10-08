@@ -1,10 +1,11 @@
 import './App.css'
-import { Hero } from "@/components/hero"
-import { About } from "@/components/about"
-import { Skills } from "@/components/skills"
-import { Projects } from "@/components/projects"
-import { Contact } from "@/components/contact"
-import { Navigation } from "@/components/navigation"
+import { Hero } from "./components/hero"
+import { About } from "./components/about"
+import { Skills } from "./components/skills"
+import { Projects } from "./components/projects"
+import { Contact } from "./components/contact"
+import { Navigation } from "./components/navigation"
+
 function App() {
 
   return (
