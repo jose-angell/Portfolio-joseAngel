@@ -4,6 +4,7 @@ import './index.css'
 import { Navigation } from './components/navigation.tsx'
 import { Hero } from './components/hero.tsx'
 import { About } from './components/about.tsx'
+import { Skills } from './components/skills.tsx'
 
 createRoot(document.getElementById('root')!).render(
   <StrictMode>
@@ -11,5 +12,6 @@ createRoot(document.getElementById('root')!).render(
     <Navigation/>
     <Hero/>
     <About/>
+    <Skills/>
   </StrictMode>,
 )
