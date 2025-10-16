@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
-
-
+import { Button } from "@/components/ui/button"
+import { Menu, X } from "lucide-react"
 
 export function Navigation() {
     const [isOpen, setIsOpen] = useState(false);
@@ -48,7 +48,7 @@ export function Navigation() {
           <div className="font-bold text-xl">
             <span className="text-primary">Dev</span>Portfolio
           </div>
-                {/* Desktop Navigation */}
+           {/* Desktop Navigation */}
           <div className="hidden md:flex space-x-8">
             {navItems.map((item) => (
               <button
@@ -64,9 +64,9 @@ export function Navigation() {
           </div>
           {/* Mobile Navigation Button */}
           <div className="md:hidden">
-            <button   onClick={() => setIsOpen(!isOpen)}>
-             x
-            </button>
+            <Button variant="ghost" size="sm" onClick={() => setIsOpen(!isOpen)}>
+              {isOpen ? <X className="h-5 w-5" /> : <Menu className="h-5 w-5" />}
+            </Button>
           </div>
         </div>
         {/* Mobile Navigation Menu */}
