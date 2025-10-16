@@ -5,6 +5,7 @@ import { Navigation } from './components/navigation.tsx'
 import { Hero } from './components/hero.tsx'
 import { About } from './components/about.tsx'
 import { Skills } from './components/skills.tsx'
+import { Projects } from './components/projects.tsx'
 
 createRoot(document.getElementById('root')!).render(
   <StrictMode>
@@ -13,5 +14,6 @@ createRoot(document.getElementById('root')!).render(
     <Hero/>
     <About/>
     <Skills/>
+    <Projects/>
   </StrictMode>,
 )
