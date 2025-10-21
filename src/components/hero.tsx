@@ -23,10 +23,13 @@ export function Hero() {
           <h1 className="text-4xl md:text-6xl font-bold mb-4">
             Hola, soy <span className="text-primary">Jose Angel Gallardo Cordova</span>
           </h1>
-          <p className="text-xl md:text-2xl text-muted-foreground mb-6">Desarrollador Web Full Stack</p>
+          <p className="text-xl md:text-2xl text-muted-foreground mb-6">Desarrollador Web Full Stack Especialista en Soluciones Empresariales .NET & SQL Server</p>
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto mb-8">
-            Especializado en crear experiencias web modernas y funcionales usando las últimas tecnologías. Apasionado
-            por el código limpio y las soluciones innovadoras.
+            {/* Especializado en crear experiencias web modernas y funcionales usando las últimas tecnologías. Apasionado
+            por el código limpio y las soluciones innovadoras. */}
+            Ingeniero especializado en convertir procesos complejos en soluciones digitales escalables. 
+            {/* con .NET y SQL Server. */}
+             Mi enfoque es el código limpio y la arquitectura robusta para garantizar la trazabilidad y la optimización de los flujos de negocio.
           </p>
         </div>
 
