@@ -31,7 +31,7 @@ export function About() {
         <div className="text-center mb-16">
           <h2 className="text-3xl md:text-4xl font-bold mb-4">Sobre Mí</h2>
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-            Desarrollador web con pasión por crear soluciones digitales que impacten positivamente a los usuarios
+            Ingeniero especializado en arquitectura de sistemas robustos, enfocado en la eficiencia operativa de negocios.
           </p>
         </div>
 
@@ -40,13 +40,14 @@ export function About() {
             <h3 className="text-2xl font-semibold mb-6">Mi Historia</h3>
             <div className="space-y-4 text-muted-foreground">
               <p>
-                Comencé mi viaje en el desarrollo web hace varios años, fascinado por la capacidad de transformar ideas
-                en experiencias digitales tangibles. Mi enfoque se centra en crear aplicaciones web que no solo
-                funcionen perfectamente, sino que también brinden una experiencia excepcional al usuario.
+                Como desarrollador, mi enfoque principal radica en el ecosistema Microsoft, dominando la creación de aplicaciones escalables y de alto rendimiento 
+                con C#, .NET, y SQL Server. Me especializo en proyectos que requieren optimización de bases de datos, integración de servicios 
+                (API RESTful) y seguridad, como lo demuestran mis contribuciones a sistemas críticos de Honorarios, Reintegros y Modelos Operativos en entornos transnacionales.
               </p>
               <p>
-                A lo largo de mi carrera, he trabajado en diversos proyectos que van desde aplicaciones empresariales
-                hasta plataformas de comercio electrónico, siempre buscando la excelencia técnica y la innovación.
+                Mi valor agregado no es solo codificar, sino resolver problemas complejos de negocio a través de la automatización. 
+                Mi objetivo es transformar flujos de trabajo manuales y propensos a errores en procesos fluidos y trazables, logrando 
+                ahorros operativos y mejorando la precisión. Poseo una mentalidad autodidacta y un compromiso inquebrantable con la excelencia técnica y el código limpio.
               </p>
               <p>
                 Cuando no estoy programando, me gusta mantenerme actualizado con las últimas tendencias tecnológicas,
