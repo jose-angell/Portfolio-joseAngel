@@ -1,4 +1,5 @@
 import { About } from "./components/About";
+import { Experience } from "./components/Experience";
 import { Hero } from "./components/Hero";
 import ProjectGrid from "./components/ProjectGrid";
 import { Skills } from "./components/Skills";
@@ -12,6 +13,7 @@ export default function App() {
     <Hero/>
     <About/>
     <Skills/>
+    <Experience/>
     <ProjectGrid/>
     </>
   )
