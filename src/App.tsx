@@ -1,6 +1,7 @@
 import { About } from "./components/About";
 import { Hero } from "./components/Hero";
 import ProjectGrid from "./components/ProjectGrid";
+import { Skills } from "./components/Skills";
 import { TopNavBar } from "./components/TopNavBar";
 
 export default function App() {
@@ -10,6 +11,7 @@ export default function App() {
     <TopNavBar/>
     <Hero/>
     <About/>
+    <Skills/>
     <ProjectGrid/>
     </>
   )
