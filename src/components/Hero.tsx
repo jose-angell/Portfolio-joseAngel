@@ -32,7 +32,9 @@ export const Hero = () => {
 
         {/* Botones de Acción */}
         <div className="flex flex-wrap items-center gap-4">
-          <Button className="bg-primary text-on-primary hover:shadow-[0_0_30px_-5px_rgba(174,198,255,0.4)] transition-all px-8 py-6 text-base font-bold tracking-wide rounded-lg">
+          <Button
+          render={<a href="#projects" className="text-black"/>}
+          className="bg-primary text-on-primary hover:shadow-[0_0_30px_-5px_rgba(174,198,255,0.4)] transition-all px-8 py-6 text-base font-bold tracking-wide rounded-lg">
             Ver Proyectos
           </Button>
           

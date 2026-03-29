@@ -7,7 +7,7 @@ const navLinks = [
   { name: "Skills", id: "skills" },
   { name: "Experience", id: "experience" },
   { name: "Projects", id: "projects" },
-  { name: "Contact", id: "contact" },
+  //{ name: "Contact", id: "contact" },
 ];
 
 export const TopNavBar = () => {
@@ -44,8 +44,8 @@ export const TopNavBar = () => {
           })}
         </div>
 
-        <Button 
-          className="bg-primary text-on-primary font-label text-xs uppercase tracking-widest font-bold hover:scale-105 active:scale-95 transition-transform rounded-lg px-5 py-2"
+        <Button render={<a href="#footer" className="text-black" />}
+          className="bg-primary text-tertiary font-label text-xs uppercase tracking-widest font-bold hover:scale-105 active:scale-95 transition-transform rounded-lg px-5 py-2"
         >
           Hire Me
         </Button>

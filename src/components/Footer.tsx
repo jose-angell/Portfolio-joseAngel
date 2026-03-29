@@ -5,7 +5,7 @@ export const Footer = () => {
   };
 
   return (
-    <footer className="border-t border-white/10 bg-surface-container-lowest pt-16 pb-8 px-6 mt-32 relative">
+    <footer id="footer" className="border-t border-white/10 bg-surface-container-lowest pt-16 pb-8 px-6 mt-32 relative">
       <div className="max-w-7xl mx-auto">
         
         {/* Grid principal del Footer */}
@@ -48,10 +48,10 @@ export const Footer = () => {
           <div className="space-y-4">
             <h3 className="font-headline font-semibold text-on-surface text-lg">Redes</h3>
             <div className="flex flex-col space-y-3 font-label text-sm text-outline">
-              <a href="https://github.com/" target="_blank" rel="noreferrer" className="hover:text-primary transition-colors flex items-center gap-2 w-fit">
+              <a href="https://github.com/jose-angell" target="_blank" rel="noreferrer" className="hover:text-primary transition-colors flex items-center gap-2 w-fit">
                 <span className="text-tertiary font-bold">{'>'}</span> GitHub
               </a>
-              <a href="https://linkedin.com/" target="_blank" rel="noreferrer" className="hover:text-primary transition-colors flex items-center gap-2 w-fit">
+              <a href="https://linkedin.com/in/jose-angell" target="_blank" rel="noreferrer" className="hover:text-primary transition-colors flex items-center gap-2 w-fit">
                 <span className="text-tertiary font-bold">{'>'}</span> LinkedIn
               </a>
               {/* Puedes añadir más enlaces aquí si lo necesitas */}

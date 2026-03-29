@@ -8,7 +8,7 @@ export default function ProjectGrid() {
       description: "A high-concurrency reservation system designed for campus event management. Built with a focus on real-time availability and robust auditing.",
       imageUrl: "https://lh3.googleusercontent.com/aida-public/AB6AXuC6u38QsNgAsysDU9whnGYtGQjtxRR_0EVYvqmlhclGFi53Zh9uNn03YtrMMFnAkQiymvoYJ0UPBeK0OG9LgC-5RLmz7z-4loBiQui92MDAGjyZTRwows8zrw8s_5y88QVdoBImNWTEQF4mkdVOXBL1PpYnEb1V6rhNCeqUMIA64vCz9CGxFOVDDVjxNVurcwMFZPUueQGINznkT0VO0Y--pbJ_TdrSzT6efYiKss-CSh_2JpezFwykJxD9AmIKBP8N5c12DeikxbA",
       imageAlt: "Modern dashboard interface for resource management",
-      technologies: ["React", ".NET 8", "PostgreSQL", "Docker"],
+      technologies: [".NET 8","C#", "React", "TypeScript", "PostgreSQL", "Docker"],
       projectUrl: "#",
       sourceCodeUrl: "#"
     },
