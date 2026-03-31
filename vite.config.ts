@@ -11,7 +11,7 @@ export default defineConfig({
     tailwindcss(),
     babel({ presets: [reactCompilerPreset()] })
   ],
-  base: 'https://github.com/jose-angell/Portfolio-joseAngel',
+  base: '/Portfolio-joseAngel/',
   resolve: {
     alias: {
       "@": path.resolve(__dirname, "./src"),
