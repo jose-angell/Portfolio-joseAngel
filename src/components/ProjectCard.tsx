@@ -70,9 +70,9 @@ export function ProjectCard({
       {/* Botón de Código Fuente usando Button de shadcn */}
       {sourceCodeUrl && (
         <div className="mt-auto">
-          <Button variant="link" className="p-0 h-auto font-label text-sm text-tertiary hover:text-tertiary/80 flex items-center gap-2" asChild>
+          <Button variant="link" className="p-0 h-auto font-label text-sm text-tertiary hover:text-tertiary/80 flex items-center gap-2" >
             <a href={sourceCodeUrl} target="_blank" rel="noopener noreferrer">
-              <span className="material-symbols-outlined text-lg">code</span> 
+              <span className="material-symbols-outlined text-lg text-tertiary font-bold">code</span> 
               Source Code
             </a>
           </Button>
