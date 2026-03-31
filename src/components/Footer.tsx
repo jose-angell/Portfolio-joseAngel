@@ -51,7 +51,7 @@ export const Footer = () => {
               <a href="https://github.com/jose-angell" target="_blank" rel="noreferrer" className="hover:text-primary transition-colors flex items-center gap-2 w-fit">
                 <span className="text-tertiary font-bold">{'>'}</span> GitHub
               </a>
-              <a href="https://linkedin.com/in/jose-angell" target="_blank" rel="noreferrer" className="hover:text-primary transition-colors flex items-center gap-2 w-fit">
+              <a href="https://www.linkedin.com/in/jose-angel-gallardo-cordova-05a347365/" target="_blank" rel="noreferrer" className="hover:text-primary transition-colors flex items-center gap-2 w-fit">
                 <span className="text-tertiary font-bold">{'>'}</span> LinkedIn
               </a>
               {/* Puedes añadir más enlaces aquí si lo necesitas */}

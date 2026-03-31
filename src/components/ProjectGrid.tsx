@@ -1,16 +1,16 @@
 import { ProjectCard } from "./ProjectCard";
-
+import layoutBookit from "../assets/layoutBookit.png";
 export default function ProjectGrid() {
   // Array de datos. En una Clean Architecture, esto podría venir de un servicio o CMS.
   const projects = [
     {
       title: "Event Resource Reservation App",
       description: "A high-concurrency reservation system designed for campus event management. Built with a focus on real-time availability and robust auditing.",
-      imageUrl: "https://lh3.googleusercontent.com/aida-public/AB6AXuC6u38QsNgAsysDU9whnGYtGQjtxRR_0EVYvqmlhclGFi53Zh9uNn03YtrMMFnAkQiymvoYJ0UPBeK0OG9LgC-5RLmz7z-4loBiQui92MDAGjyZTRwows8zrw8s_5y88QVdoBImNWTEQF4mkdVOXBL1PpYnEb1V6rhNCeqUMIA64vCz9CGxFOVDDVjxNVurcwMFZPUueQGINznkT0VO0Y--pbJ_TdrSzT6efYiKss-CSh_2JpezFwykJxD9AmIKBP8N5c12DeikxbA",
+      imageUrl: layoutBookit,
       imageAlt: "Modern dashboard interface for resource management",
       technologies: [".NET 8","C#", "React", "TypeScript", "PostgreSQL", "Docker"],
       projectUrl: "#",
-      sourceCodeUrl: "#"
+      sourceCodeUrl: "https://jose-angell.github.io/EventResourceReservationAppDocs/"
     },
     {
       title: "E-Commerce Razor Pages",
