@@ -1,41 +1,9 @@
-interface ExperienceItem {
-  id: number;
-  period: string;
-  role: string;
-  company: string;
-  description: string[]; // Cambiamos a un array para renderizar viñetas
-  technologies: string[]; // Agregamos las tecnologías clave
-}
+import { useLanguage } from "../context/LanguageContext";
 
-const experienceData: ExperienceItem[] = [
-  {
-    id: 1,
-    period: "Dic 2022 - Presente",
-    role: "Desarrollador Web Full Stack",
-    company: "NTT DATA",
-    description: [
-      "Lideré la migración y refactorización de servicios críticos (Vigencia y Reintegros), incluyendo la transición de PostgreSQL a SQL Server sin interrupción operativa.",
-      "Desarrollé arquitecturas de integración con el ecosistema SAP y normativas del SAT, automatizando procesos comerciales y de facturación.",
-      "Implementé sistemas de telemetría y monitoreo de errores (logs) en aplicaciones productivas, reduciendo drásticamente los tiempos de diagnóstico.",
-      "Integré flujos de autenticación segura con Azure y automaticé la carga masiva de datos mediante el procesamiento de archivos Excel y XML."
-    ],
-    technologies: [".NET", "C#", "SQL Server", "MVC", "SAP Integration", "Azure"]
-  },
-  {
-    id: 2,
-    period: "Ago 2021 - Nov 2022",
-    role: "Desarrollador Web",
-    company: "Volkswagen Veracruz",
-    description: [
-      "Diseñé e implementé un sistema integral para la valuación de autos seminuevos, agilizando el proceso de tasación y documentación interna.",
-      "Desarrollé módulos de control de inventario de herramientas para optimizar la trazabilidad y reducir pérdidas operativas.",
-      "Construí APIs RESTful para la interconexión de plataformas y sistemas internos, mejorando el flujo de información entre departamentos."
-    ],
-    technologies: ["Angular", "TypeScript", "C#", "Entity Framework", "RESTful APIs"]
-  }
-];
 
 export const Experience = () => {
+   const { t } = useLanguage();
+    const experienceData = t('experience', 'experiencesItems') as unknown as {  id: string; period: string; role: string; company: string; description: string[]; technologies: string[] }[];
   return (
     <section id="experience" className="bg-surface-container py-32 px-6">
       <div className="max-w-4xl mx-auto">
@@ -45,7 +13,7 @@ export const Experience = () => {
             03 // Career Path
           </span>
           <h2 className="font-headline text-4xl md:text-5xl font-bold text-on-surface">
-            Professional Experience
+            {t('experience', 'title')}
           </h2>
         </div>
 

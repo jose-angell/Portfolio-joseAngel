@@ -1,7 +1,9 @@
+import { useLanguage } from "../context/LanguageContext";
 
 
 
 export const About = () => {
+  const { t } = useLanguage();
   return (
     <section id="about" className="bg-surface-container-low py-32 px-6">
       <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-20 items-center">
@@ -24,7 +26,7 @@ export const About = () => {
             {/* Tarjeta de Status Flotante (Usa la utilidad de CSS que creamos) */}
             <div className="absolute -bottom-6 -right-6 glass-card p-6 z-20 rounded-lg hidden md:block">
               <span className="font-label text-tertiary text-sm block mb-1">Status:</span>
-              <span className="font-headline font-bold text-xl text-on-surface">Open for opportunities</span>
+              <span className="font-headline font-bold text-xl text-on-surface">{t('about', 'status')}</span>
             </div>
           </div>
         </div>
@@ -36,15 +38,15 @@ export const About = () => {
           </span>
           
           <h2 className="font-headline text-4xl md:text-5xl font-bold mb-8 text-on-surface">
-            De la Mecatrónica al Full Stack
+            {t('about', 'title')}
           </h2>
           
           <div className="space-y-6 text-outline text-lg leading-relaxed">
             <p>
-              Starting as a Mechatronic Engineer gave me a unique perspective on hardware-software integration and systematic problem solving. My evolution into Full Stack Development was driven by a passion for creating digital systems that are as precise as industrial machinery.
+              {t('about', 'content1')}
             </p>
             <p>
-              Today, my focus is centered on <span className="text-on-surface font-medium underline decoration-tertiary/50">Clean Architecture</span>. I believe code should not only solve a problem but also be a sustainable foundation for business growth. I specialize in the modern web ecosystem, bridging the gap between robust backend logic and intuitive user experiences.
+              {t('about', 'content2')}
             </p>
           </div>
         </div>

@@ -1,17 +1,12 @@
+import { useLanguage } from "../context/LanguageContext";
 import { useActiveSection } from "../hooks/useActiveSection";
 import { Button } from "./ui/button";
 
-const navLinks = [
-  { name: "Home", id: "home" },
-  { name: "About", id: "about" },
-  { name: "Skills", id: "skills" },
-  { name: "Experience", id: "experience" },
-  { name: "Projects", id: "projects" },
-  //{ name: "Contact", id: "contact" },
-];
-
 export const TopNavBar = () => {
-  // Extraemos solo los IDs ["home", "about", "skills", ...]
+  const { t, language, toggleLanguage } = useLanguage();
+
+  const navLinks = t('topbar', 'links') as unknown as { name: string; id: string }[];
+
   const sectionIds = navLinks.map(link => link.id);
   
   // Usamos nuestro hook
@@ -49,6 +44,18 @@ export const TopNavBar = () => {
         >
           Hire Me
         </Button>
+        <div className="flex items-center gap-4">
+          
+          {/* 4. Botón Toggle ES/EN */}
+          <button 
+            onClick={toggleLanguage}
+            className="flex items-center justify-center w-10 h-10 rounded-full border border-white/10 hover:border-primary/50 text-on-surface hover:text-primary transition-all font-label text-sm font-bold"
+            aria-label="Cambiar idioma"
+          >
+            {language === 'es' ? 'EN' : 'ES'}
+          </button>
+
+        </div>
       </div>
     </nav>
   );

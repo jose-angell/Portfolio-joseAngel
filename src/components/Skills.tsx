@@ -1,3 +1,4 @@
+import { useLanguage } from "../context/LanguageContext";
 import { SkillCard } from "./SkillCard";
 
 // Definimos la data de forma centralizada.
@@ -26,6 +27,7 @@ const skillsData = [
 ];
 
 export const Skills = () => {
+  const { t } = useLanguage();
   return (
     <section id="skills" className="max-w-7xl mx-auto px-6 py-24">
       
@@ -35,7 +37,7 @@ export const Skills = () => {
           02 // Core Stack
         </span>
         <h2 className="font-headline text-4xl md:text-5xl font-bold text-on-surface">
-          Technical Capabilities
+          {t('skills', 'title')}
         </h2>
       </div>
 
