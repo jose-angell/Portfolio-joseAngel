@@ -58,7 +58,7 @@ Si deseas clonar y correr este proyecto en tu máquina local, sigue estos pasos:
 
 1. Clonar el repositorio:
 ```bash
-git clone [https://github.com/jose-angell/Portfolio-joseAngel.git](https://github.com/jose-angell/Portfolio-joseAngel.git)
+git clone https://github.com/jose-angell/Portfolio-joseAngel.git
 ```
 
 2. Navegar al directorio:
@@ -87,7 +87,7 @@ Si estás interesado en colaborar, discutir sobre arquitectura de software o tie
 
 * Email: gallardocordovajoseangel@gmail.com
 
-* LinkedIn: [Tu Enlace de LinkedIn]
+* LinkedIn: [Jose Angel](https://www.linkedin.com/in/jose-angel-gallardo-cordova-05a347365/?lipi=urn%3Ali%3Apage%3Ad_flagship3_search_srp_jobs%3BOEZDUOU2S5y%2FnI3PnpMD3w%3D%3D)
 
 * GitHub: jose-angell
 
