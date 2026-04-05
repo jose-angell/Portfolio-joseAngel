@@ -1,5 +1,6 @@
 import { Button } from "./ui/button"
 import { useLanguage } from "../context/LanguageContext";
+import cvPdf from '../assets/my_cv.pdf'
 
 export const Hero = () => {
   const { t } = useLanguage();
@@ -39,7 +40,9 @@ export const Hero = () => {
           </Button>
           
           {/* Botón secundario con icono para el CV */}
-          <Button variant="outline" className="border-outline-variant text-on-surface px-8 py-6 text-base hover:bg-white/5 transition-colors group rounded-lg">
+          <Button
+          render={<a href={cvPdf} target="_blank" rel="noopener noreferrer"/>}
+           variant="outline" className="border-outline-variant text-on-surface px-8 py-6 text-base hover:bg-white/5 transition-colors group rounded-lg">
             {t('hero', 'btnCV')}
             <span className="material-symbols-outlined ml-2 text-lg group-hover:translate-y-1 transition-transform">
               download
