@@ -1,4 +1,5 @@
 import layoutBookit from "../assets/layoutBookit.png";
+import layoutWorkshopAdmin from "../assets/workshopAdmin.png";
 
 
 export const translations = {
@@ -73,13 +74,13 @@ export const translations = {
         sourceCodeUrl: "https://jose-angell.github.io/EventResourceReservationAppDocs/"
       },
       {
-        title: "E-Commerce Razor Pages",
-        description: "Una plataforma de comercio electrónico ligera y rápida que utiliza renderizado del lado del servidor para un SEO óptimo y una velocidad de carga inicial superior. Pasarelas de pago integradas.",
-        imageUrl: "https://lh3.googleusercontent.com/aida-public/AB6AXuD1YuZYPn4psvgol1w9OSMtvfGZpyz0ktTr-R9WPokrnF094B3SGV2_0w5AIfenzoNmSxR4fSYNWsdiiv1RZZZh6mEZ0hKdHIbPQTV_zZ-R0Fv0hqt40O2YeZGhkDA3MnunH6IuDSLUkADYYBGUji-OfO8cKyhtRxmCe8RX9vcaiHKtzaVMcel6BNkmQGBoMsEyO9uRsITHq6VD71E9BQQwWvogweKf1psdTt7x_UY-4Trh4UckkCMxyiNOseITK8rV_MgpHpgnGDs",
-        imageAlt: "Sleek e-commerce landing page with product grid",
-        technologies: ["Razor Pages", "C#", "Tailwind CSS"],
+        title: "WorkshopAdmin",
+        description: "Sistema integral de gestión para talleres mecánicos, optimizando el control de órdenes de servicio, inventario y clientes. Desarrollado con una arquitectura modular para garantizar eficiencia operativa y escalabilidad en la nube mediante Azure.",
+        imageUrl: layoutWorkshopAdmin,
+        imageAlt: "Dashboard de gestión de talleres y servicios",
+        technologies: ["Blazor WebAssembly", ".NET 8", "C#", "PostgreSQL", "JWT", "Azure"],
         projectUrl: "#",
-        sourceCodeUrl: "#"
+        sourceCodeUrl: "https://github.com/jose-angell/WorkshopAdmin" 
       }
     ]
     }
@@ -154,13 +155,13 @@ export const translations = {
         sourceCodeUrl: "https://jose-angell.github.io/EventResourceReservationAppDocs/"
       },
       {
-        title: "E-Commerce Razor Pages",
-        description: "Lightweight and fast e-commerce platform using Server Side Rendering for optimal SEO and initial load speed. Integrated payment gateways.",
-        imageUrl: "https://lh3.googleusercontent.com/aida-public/AB6AXuD1YuZYPn4psvgol1w9OSMtvfGZpyz0ktTr-R9WPokrnF094B3SGV2_0w5AIfenzoNmSxR4fSYNWsdiiv1RZZZh6mEZ0hKdHIbPQTV_zZ-R0Fv0hqt40O2YeZGhkDA3MnunH6IuDSLUkADYYBGUji-OfO8cKyhtRxmCe8RX9vcaiHKtzaVMcel6BNkmQGBoMsEyO9uRsITHq6VD71E9BQQwWvogweKf1psdTt7x_UY-4Trh4UckkCMxyiNOseITK8rV_MgpHpgnGDs",
-        imageAlt: "Sleek e-commerce landing page with product grid",
-        technologies: ["Razor Pages", "C#", "Tailwind CSS"],
+        title: "WorkshopAdmin",
+        description: "Comprehensive management system for automotive workshops, optimizing the control of service orders, inventory, and clients. Developed with a modular architecture to ensure operational efficiency and cloud scalability using Azure.",
+        imageUrl: layoutWorkshopAdmin,
+        imageAlt: "Workshop and service management dashboard",
+        technologies: ["Blazor WebAssembly", ".NET 8", "C#", "PostgreSQL", "JWT", "Azure"],
         projectUrl: "#",
-        sourceCodeUrl: "#"
+        sourceCodeUrl: "https://github.com/jose-angell/WorkshopAdmin" 
       }
     ]   
     }
