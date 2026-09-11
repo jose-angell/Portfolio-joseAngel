@@ -36,7 +36,7 @@ export const translations = {
       experiencesItems : [
       {
         id: 1,
-        period: "Dic 2022 - Presente",
+        period: "Dic 2022 - Sep 2026",
         role: "Desarrollador Web Full Stack",
         company: "NTT DATA",
         description: [
@@ -57,7 +57,7 @@ export const translations = {
           "Desarrollé módulos de control de inventario de herramientas para optimizar la trazabilidad y reducir pérdidas operativas.",
           "Construí APIs RESTful para la interconexión de plataformas y sistemas internos, mejorando el flujo de información entre departamentos."
         ],
-        technologies: ["Angular", "TypeScript", "C#", "Entity Framework", "RESTful APIs"]
+        technologies: ["C#", "Entity Framework", "RESTful APIs", "Angular", "TypeScript"]
       }
     ]
     },
@@ -117,7 +117,7 @@ export const translations = {
        experiencesItems:[
       {
         id: 1,
-        period: "Dic 2022 - Present",
+        period: "Dic 2022 - Sep 2026",
         role: "Web Developer Full Stack",
         company: "NTT DATA",
         description: [
@@ -138,7 +138,7 @@ export const translations = {
           "Developed inventory control modules for optimizing traceability and reducing operational losses.",
           "Built RESTful APIs for interconnecting platforms and internal systems, improving information flow between departments."
         ],
-        technologies: ["Angular", "TypeScript", "C#", "Entity Framework", "RESTful APIs"]
+        technologies: ["C#", "Entity Framework", "RESTful APIs", "Angular", "TypeScript"]
       }
     ]
     },
