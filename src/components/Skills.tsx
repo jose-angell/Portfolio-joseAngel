@@ -6,27 +6,27 @@ import { SkillCard } from "./SkillCard";
 const skillsData = [
   {
     iconName: "terminal",
-    title: "Backend",
-    skills: [".NET","C#", "ASP.NET Core", "REST APIs", "Entity Framework Core"],
+    title: "Backend Development",
+    skills: [".NET", "C#", "ASP.NET Core", "REST APIs", "Entity Framework Core"],
   },
   {
     iconName: "database",
-    title: "Databases",
-    skills: [ "SQL Server","PostgreSQL"],
+    title: "Data & Persistence",
+    skills: ["SQL Server", "PostgreSQL"],
   },
   {
     iconName: "architecture",
-    title: "Architecture & Best Practices",
+    title: "Architecture & Engineering",
     skills: ["Clean Architecture", "SOLID", "Dependency Injection", "Testing", "xUnit"],
   },
   {
     iconName: "devops",
     title: "DevOps & Tools",
-    skills: ["Docker", "Git", "Git", "GitHub Actions"],
+    skills: ["Docker", "Git", "GitHub", "GitHub Actions"],
   },
   {
     iconName: "web",
-    title: "Frontend",
+    title: "Frontend Technologies",
     skills: ["JavaScript", "TypeScript", "Angular", "React", "Blazor"],
   },
 ];
