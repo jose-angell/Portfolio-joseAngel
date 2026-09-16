@@ -36,15 +36,15 @@ export const translations = {
       {
         id: 1,
         period: "Dic 2022 - Sep 2026",
-        role: "Desarrollador Web Full Stack",
+        role: "Software Developer | .NET",
         company: "NTT DATA",
         description: [
-          "Lideré la migración y refactorización de servicios críticos (Vigencia y Reintegros), incluyendo la transición de PostgreSQL a SQL Server sin interrupción operativa.",
-          "Desarrollé arquitecturas de integración con el ecosistema SAP y normativas del SAT, automatizando procesos comerciales y de facturación.",
-          "Implementé sistemas de telemetría y monitoreo de errores (logs) en aplicaciones productivas, reduciendo drásticamente los tiempos de diagnóstico.",
-          "Integré flujos de autenticación segura con Azure y automaticé la carga masiva de datos mediante el procesamiento de archivos Excel y XML."
+          "Lideré la migración y refactorización de servicios empresariales, incluyendo la transición de PostgreSQL a SQL Server, preservando reglas de negocio y continuidad operativa.",
+          "Desarrollé integraciones con SAP, procesos fiscales del SAT y proveedores externos, automatizando flujos comerciales y de facturación.",
+          "Implementé procesos de carga y procesamiento masivo de datos mediante Excel y XML, incorporando validaciones, logs y notificaciones automáticas.",
+          "Implementé mecanismos de logging y monitoreo de errores en aplicaciones productivas, reduciendo aproximadamente un 40 % los tiempos de diagnóstico y resolución de incidentes."
         ],
-        technologies: [".NET", "C#", "SQL Server", "MVC", "SAP Integration", "Azure"]
+        technologies: [".NET", "C#", "SQL Server", "PostgreSQL", "ASP.NET MVC", "Web Services", "SAP"]
       },
       {
         id: 2,
@@ -52,11 +52,11 @@ export const translations = {
         role: "Desarrollador Web",
         company: "Volkswagen Veracruz",
         description: [
-          "Diseñé e implementé un sistema integral para la valuación de autos seminuevos, agilizando el proceso de tasación y documentación interna.",
-          "Desarrollé módulos de control de inventario de herramientas para optimizar la trazabilidad y reducir pérdidas operativas.",
-          "Construí APIs RESTful para la interconexión de plataformas y sistemas internos, mejorando el flujo de información entre departamentos."
+          "Diseñé e implementé un sistema para la valuación de vehículos seminuevos, agilizando los procesos internos de tasación y documentación.",
+          "Desarrollé módulos de control e inventario de herramientas, mejorando la trazabilidad de recursos utilizados por las áreas operativas.",
+          "Construí APIs RESTful para integrar aplicaciones y sistemas internos, facilitando el intercambio de información entre plataformas."
         ],
-        technologies: ["C#", "Entity Framework", "RESTful APIs", "Angular", "TypeScript"]
+        technologies: ["C#", "Entity Framework","SQL Server", "RESTful APIs", "Angular", "TypeScript"]
       }
     ]
     },
@@ -65,19 +65,19 @@ export const translations = {
       projectItems: [
       {
         title: "Event Resource Reservation App",
-        description: "Sistema robusto de reservas de recursos para eventos. Desarrollado aplicando principios de Clean Architecture y patrones de diseño empresariales (Repository, Unit of Work) para garantizar mantenibilidad y escalabilidad a largo plazo.",
+        description: "Plataforma de reserva de recursos para eventos con backend desarrollado en .NET 8. Implementa una API REST con autenticación y autorización mediante JWT y ASP.NET Core Identity, persistencia con PostgreSQL y Entity Framework Core, reglas de disponibilidad por rango de fechas, logging con Serilog, Docker y pruebas unitarias sobre dominio y casos de uso.",
         imageUrl: layoutBookit,
         imageAlt: "Modern dashboard interface for resource management",
-        technologies: [".NET 8","C#", "React", "TypeScript", "PostgreSQL", "Docker"],
+        technologies: [".NET 8","C#", "ASP.NET Core", "PostgreSQL","EF Core","JWT", "Docker","xUnit"],
         projectUrl: "#",
-        sourceCodeUrl: "https://jose-angell.github.io/EventResourceReservationAppDocs/"
+        sourceCodeUrl: "https://github.com/jose-angell/EventResourceReservationAppBackend"
       },
       {
         title: "WorkshopAdmin",
-        description: "Sistema integral de gestión para talleres mecánicos, optimizando el control de órdenes de servicio, inventario y clientes. Desarrollado con una arquitectura modular para garantizar eficiencia operativa y escalabilidad en la nube mediante Azure.",
+        description: "Sistema full stack para la gestión de talleres técnicos desarrollado con .NET 10 y Blazor WebAssembly. Permite administrar clientes, equipos, órdenes de servicio e inventario, incorporando reglas de transición de estados, control de stock, autenticación JWT y persistencia con PostgreSQL mediante Entity Framework Core dentro de una arquitectura modular por capas.",
         imageUrl: layoutWorkshopAdmin,
         imageAlt: "Dashboard de gestión de talleres y servicios",
-        technologies: ["Blazor WebAssembly", ".NET 8", "C#", "PostgreSQL", "JWT", "Azure"],
+        technologies: ["Blazor WebAssembly", ".NET 10", "C#","ASP.NET Core", "PostgreSQL", "JWT","EF Core"],
         projectUrl: "#",
         sourceCodeUrl: "https://github.com/jose-angell/WorkshopAdmin" 
       }
@@ -117,15 +117,15 @@ export const translations = {
       {
         id: 1,
         period: "Dic 2022 - Sep 2026",
-        role: "Web Developer Full Stack",
+        role: "Software Developer | .NET",
         company: "NTT DATA",
         description: [
-          "Led the migration and refactoring of critical services (Validity and Refunds), including the transition from PostgreSQL to SQL Server with zero operational downtime.",
-          "Developed integration architectures with the SAP ecosystem and SAT regulations, automating commercial and billing processes.",
-          "Implemented telemetry and error monitoring systems (logs) in production applications, drastically reducing diagnostic times.",
-          "Integrated secure authentication flows with Azure and automated massive data loading through Excel and XML file processing."
+          "Led the migration and refactoring of enterprise services, including a PostgreSQL-to-SQL Server transition while preserving business rules and operational continuity.",
+          "Developed integrations with SAP, SAT-related processes, and external providers, automating commercial and billing workflows.",
+          "Implemented bulk data processing workflows using Excel and XML, including validation, logging, and automated notifications.",
+          "Implemented logging and error monitoring across production applications, reducing incident diagnosis and resolution time by approximately 40%."
         ],
-        technologies: [".NET", "C#", "SQL Server", "MVC", "SAP Integration", "Azure"]
+        technologies: [".NET", "C#", "SQL Server", "PostgreSQL", "ASP.NET MVC", "Web Services", "SAP"]
       },
       {
         id: 2,
@@ -133,11 +133,11 @@ export const translations = {
         role: "Web Developer",
         company: "Volkswagen Veracruz",
         description: [
-          "Designed and implemented a comprehensive system for used car valuation, streamlining the appraisal and internal documentation process.",
-          "Developed inventory control modules for optimizing traceability and reducing operational losses.",
-          "Built RESTful APIs for interconnecting platforms and internal systems, improving information flow between departments."
+          "Designed and implemented a system for used vehicle valuation, streamlining internal appraisal and documentation workflows.",
+          "Developed tool inventory management modules, improving operational resource traceability.",
+          "Built REST APIs to integrate internal applications and systems, improving information exchange between platforms."
         ],
-        technologies: ["C#", "Entity Framework", "RESTful APIs", "Angular", "TypeScript"]
+        technologies: ["C#", "Entity Framework","SQL Server", "RESTful APIs", "Angular", "TypeScript"]
       }
     ]
     },
@@ -146,19 +146,19 @@ export const translations = {
       projectItems: [
       {
         title: "Event Resource Reservation App",
-        description: "Robust resource reservation system for events. Developed applying Clean Architecture principles and enterprise design patterns (Repository, Unit of Work) to ensure long-term maintainability and scalability.",
+        description: "Resource reservation platform for events with a backend built on .NET 8. It provides REST APIs with JWT and ASP.NET Core Identity authentication and authorization, PostgreSQL persistence with Entity Framework Core, date-range availability rules, structured logging with Serilog, Docker-based local setup, and unit tests covering domain rules and application use cases.",
         imageUrl: layoutBookit,
         imageAlt: "Modern dashboard interface for resource management",
-        technologies: [".NET 8","C#", "React", "TypeScript", "PostgreSQL", "Docker"],
+        technologies: [".NET 8","C#", "ASP.NET Core", "PostgreSQL","EF Core","JWT", "Docker","xUnit"],
         projectUrl: "#",
-        sourceCodeUrl: "https://jose-angell.github.io/EventResourceReservationAppDocs/"
+        sourceCodeUrl: "https://github.com/jose-angell/EventResourceReservationAppBackend"
       },
       {
         title: "WorkshopAdmin",
-        description: "Comprehensive management system for automotive workshops, optimizing the control of service orders, inventory, and clients. Developed with a modular architecture to ensure operational efficiency and cloud scalability using Azure.",
+        description: "Full-stack management system for technical workshops built with .NET 10 and Blazor WebAssembly. It manages customers, equipment, service orders, and inventory while enforcing workflow state transitions, stock rules, JWT authentication, and PostgreSQL persistence through Entity Framework Core within a modular layered architecture.",
         imageUrl: layoutWorkshopAdmin,
         imageAlt: "Workshop and service management dashboard",
-        technologies: ["Blazor WebAssembly", ".NET 8", "C#", "PostgreSQL", "JWT", "Azure"],
+        technologies: ["Blazor WebAssembly", ".NET 10", "C#","ASP.NET Core", "PostgreSQL", "JWT","EF Core"],
         projectUrl: "#",
         sourceCodeUrl: "https://github.com/jose-angell/WorkshopAdmin" 
       }

@@ -22,6 +22,8 @@ export function ProjectCard({
   projectUrl,
   sourceCodeUrl,
 }: ProjectCardProps) {
+  const hasProjectUrl = Boolean(projectUrl?.trim() && projectUrl.trim() !== "#");
+
   return (
     <div className="group flex flex-col h-full">
       {/* Contenedor de la Imagen */}
@@ -50,7 +52,7 @@ export function ProjectCard({
       {/* Título y Enlace Externo */}
       <h3 className="font-headline font-bold text-2xl mb-3 flex items-center gap-3">
         {title}
-        {projectUrl && (
+        {hasProjectUrl && (
           <a
             href={projectUrl}
             target="_blank"
