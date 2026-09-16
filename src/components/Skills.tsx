@@ -7,22 +7,27 @@ const skillsData = [
   {
     iconName: "terminal",
     title: "Backend",
-    skills: [".NET Core / C#", "Node.js / Express", "RESTful APIs", "Microservices", "Clean Architecture"],
-  },
-  {
-    iconName: "web",
-    title: "Frontend",
-    skills: ["React / Next.js", "TypeScript", "Tailwind CSS", "shadcn/ui", "Redux / TanStack"],
+    skills: [".NET","C#", "ASP.NET Core", "REST APIs", "Entity Framework Core"],
   },
   {
     iconName: "database",
     title: "Databases",
-    skills: ["PostgreSQL", "SQL Server / MySQL", "MongoDB", "Redis"],
+    skills: [ "SQL Server","PostgreSQL"],
   },
   {
     iconName: "architecture",
-    title: "Infrastructure & Tools",
-    skills: ["Docker", "CI/CD (GitHub Actions)", "Azure / AWS", "Git & GitHub", "SOLID Principles"],
+    title: "Architecture & Best Practices",
+    skills: ["Clean Architecture", "SOLID", "Dependency Injection", "Testing", "xUnit"],
+  },
+  {
+    iconName: "devops",
+    title: "DevOps & Tools",
+    skills: ["Docker", "Git", "Git", "GitHub Actions"],
+  },
+  {
+    iconName: "web",
+    title: "Frontend",
+    skills: ["JavaScript", "TypeScript", "Angular", "React", "Blazor"],
   },
 ];
 

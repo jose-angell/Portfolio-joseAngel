@@ -14,19 +14,18 @@ export const translations = {
             ]
     },
     hero: {
-      title1: "Ingeniero",
-      title2: "Full Stack",
-      intro: <>Especializado en el ecosistema <strong className="text-on-surface font-medium">.NET</strong> y <strong className="text-on-surface font-medium">JavaScript/TypeScript</strong>. 
-          Aplico la perspectiva analítica de la Ingeniería Mecatrónica para desarrollar arquitecturas limpias, 
-          creando soluciones empresariales que optimizan procesos y escalan con calidad.</>,
+      title1: "Desarrollador",
+      title2: ".NET Backend",
+      intro: <>Desarrollador de software con más de 4 años de experiencia en soluciones empresariales, especializado en backend con <strong className="text-on-surface font-medium">.NET</strong>
+       y <strong className="text-on-surface font-medium">C#</strong>. Desarrollo APIs, integraciones y procesos orientados a datos, con experiencia complementaria en tecnologías frontend.</>,
       btnProjects: "Ver Proyectos",
       btnCV: "Descargar CV"
     },
     about:{
-        title: "De la Mecatrónica al Full Stack",
+        title: "Ingeniería aplicada al desarrollo backend",
         status: "Abierto a oportunidades",
-        content1: `Iniciar como Ingeniero Mecatrónico me dio una perspectiva única sobre la integración de hardware-software y la resolución sistemática de problemas. Mi evolución hacia el desarrollo Full Stack fue impulsada por la pasión de crear sistemas digitales que sean tan precisos como la maquinaria industrial.`,
-        content2: <>Hoy, mi enfoque se centra en la <span className="text-on-surface font-medium underline decoration-tertiary/50">Clean Architecture</span>. Creo que el código no solo debe resolver un problema, sino ser una base sostenible para el crecimiento del negocio. Me especializo en el ecosistema web moderno, cerrando la brecha entre una lógica backend robusta y experiencias de usuario intuitivas.</>
+        content1: `Mi formación en Ingeniería Mecatrónica fortaleció una forma estructurada de analizar problemas, comprender sistemas complejos y buscar soluciones eficientes. Esa base me llevó al desarrollo de software, donde he aplicado ese enfoque durante más de 4 años en soluciones empresariales, integraciones y automatización de procesos.`,
+        content2: <>Hoy me especializo en desarrollo backend con <strong className="text-on-surface font-medium">.NET</strong> y <strong className="text-on-surface font-medium">C#</strong>, trabajando con APIs, bases de datos y procesos orientados a datos. Mi objetivo es construir soluciones mantenibles y bien estructuradas, profundizando continuamente en arquitectura de software, testing, Docker y cloud. También cuento con experiencia en tecnologías frontend, lo que me permite comprender y colaborar en una solución de extremo a extremo cuando el proyecto lo requiere.</>
     },
     skills:{
       title: "Capacidades Técnicas"
@@ -96,18 +95,18 @@ export const translations = {
             ]
     },
     hero: {
-      title1: "Full Stack",
-      title2: "Engineer",
-      intro: <>Specialized in the <strong className="text-on-surface font-medium">.NET</strong> and <strong className="text-on-surface font-medium">JavaScript/TypeScript</strong>.
-       I apply the analytical perspective of Mechatronics Engineering to develop clean architectures, creating enterprise solutions that optimize processes and scale with quality.</>,
+      title1: ".NET Backend",
+      title2: "Developer",
+      intro: <>Software developer with 4+ years of experience building enterprise solutions, specializing in backend development with <strong className="text-on-surface font-medium">.NET</strong> 
+      and <strong className="text-on-surface font-medium">C#</strong>. I work on APIs, system integrations, and data-driven processes, with complementary experience in frontend technologies.</>,
       btnProjects: "View Projects",
       btnCV: "Download CV"
     },
      about:{
-        title: "From Mechatronics to Full Stack",
+        title: "Engineering Mindset for Backend Development",
         status: "Open for opportunities",
-        content1: `Starting as a Mechatronic Engineer gave me a unique perspective on hardware-software integration and systematic problem-solving. My evolution into Full Stack Development was driven by a passion for creating digital systems that are as precise as industrial machinery.`,
-        content2: <>Today, my focus is on <span className="text-on-surface font-medium underline decoration-tertiary/50">Clean Architecture</span>. I believe that code should not only solve a problem but also provide a sustainable foundation for business growth. I specialize in the modern web ecosystem, bridging the gap between robust backend logic and intuitive user experiences.</>
+        content1: `My background in Mechatronics Engineering strengthened the way I approach complex problems, analyze systems, and design efficient solutions. That foundation led me into software development, where I have applied the same mindset for more than 4 years building enterprise solutions, integrations, and process automation.`,
+        content2: <>Today, I specialize in backend development with <strong className="text-on-surface font-medium">.NET</strong> and <strong className="text-on-surface font-medium">C#</strong>, working with APIs, databases, and data-driven processes. My focus is on building maintainable and well-structured solutions while continuously developing my skills in software architecture, testing, Docker, and cloud technologies. I also have frontend experience, allowing me to understand and contribute to end-to-end solutions when a project requires it.</>
     },
     skills:{
       title: "Technical Capabilities"
