@@ -1,6 +1,6 @@
 # SPEC 01 — Pantalla de proyectos con filtros y modal de detalle
 
-> **Estado:** aprobado
+> **Estado:** implementado
 > **Depende de:** —
 > **Fecha:** 2026-10-20
 > **Objetivo:** Agregar una vista `#/projects` que muestre todos los proyectos del portafolio en un layout bento con filtros por categoría y un modal de detalle por proyecto, siguiendo `design/moreProyects.html`.
@@ -108,21 +108,21 @@ Convenciones:
 
 ## Criterios de aceptación
 
-- [ ] `npm run build` y `npm run lint` terminan sin errores.
-- [ ] Abrir `<base>/#/projects` directamente (recarga incluida) muestra la pantalla de proyectos.
-- [ ] Click en `VIEW_ALL_REPOS` del home navega a `#/projects` y la pantalla empieza arriba.
-- [ ] El botón Atrás del navegador desde `#/projects` regresa al home.
-- [ ] Desde `#/projects`, click en "Sobre mí" muestra el home desplazado a la sección `about`.
-- [ ] En `#/projects` el link "Proyectos" del nav aparece activo.
-- [ ] Se muestran 4 proyectos con `ALL`; `FRONTEND` muestra solo WorkshopAdmin; `.NET` muestra los 4.
-- [ ] El filtro activo tiene el estilo resaltado del diseño y los demás el estilo neutro.
-- [ ] Click en cualquier tarjeta abre el modal con rol, contexto, descripción extendida, highlights y tecnologías de ese proyecto.
-- [ ] El modal se cierra con Esc, con click en el overlay y con el botón de cierre; el foco vuelve a la tarjeta.
-- [ ] Sistema Vigencia y Proyecto Reintegro no muestran imagen rota ni enlace de código; muestran el ícono y `privateLabel`.
-- [ ] Cambiar idioma ES/EN en `#/projects` traduce header, filtros, tarjetas, modal abierto y CTA, sin salir de la vista.
-- [ ] "Ver CV" abre el PDF en una pestaña nueva en el build de producción (`npm run preview`).
-- [ ] La sección Proyectos del home se ve igual que antes, salvo `VIEW_ALL_REPOS`.
-- [ ] A 375px de ancho no hay scroll horizontal y el grid queda en una columna.
+- [x] `npm run build` y `npm run lint` terminan sin errores.
+- [x] Abrir `<base>/#/projects` directamente (recarga incluida) muestra la pantalla de proyectos.
+- [x] Click en `VIEW_ALL_REPOS` del home navega a `#/projects` y la pantalla empieza arriba.
+- [x] El botón Atrás del navegador desde `#/projects` regresa al home.
+- [x] Desde `#/projects`, click en "Sobre mí" muestra el home desplazado a la sección `about`.
+- [x] En `#/projects` el link "Proyectos" del nav aparece activo.
+- [x] Se muestran 4 proyectos con `ALL`; `FRONTEND` muestra solo WorkshopAdmin; `.NET` muestra los 4.
+- [x] El filtro activo tiene el estilo resaltado del diseño y los demás el estilo neutro.
+- [x] Click en cualquier tarjeta abre el modal con rol, contexto, descripción extendida, highlights y tecnologías de ese proyecto.
+- [x] El modal se cierra con Esc, con click en el overlay y con el botón de cierre; el foco vuelve a la tarjeta.
+- [x] Sistema Vigencia y Proyecto Reintegro no muestran imagen rota ni enlace de código; muestran el ícono y `privateLabel`.
+- [x] Cambiar idioma ES/EN en `#/projects` traduce header, filtros, tarjetas, modal abierto y CTA, sin salir de la vista.
+- [x] "Ver CV" abre el PDF en una pestaña nueva en el build de producción (`npm run preview`).
+- [x] La sección Proyectos del home se ve igual que antes, salvo `VIEW_ALL_REPOS`.
+- [x] A 375px de ancho no hay scroll horizontal y el grid queda en una columna.
 
 ## Decisiones
 
