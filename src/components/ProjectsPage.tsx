@@ -175,7 +175,14 @@ export function ProjectsPage() {
 
       <ProjectDetailDialog
         project={selectedProject}
-        labels={{ role: page.modalRole, context: page.modalContext, highlights: page.modalHighlights }}
+        labels={{
+          role: page.modalRole,
+          context: page.modalContext,
+          highlights: page.modalHighlights,
+          viewCode: page.viewCode,
+          viewDemo: page.viewDemo,
+          privateLabel: page.privateLabel,
+        }}
         onClose={() => setSelectedId(null)}
       />
     </main>
