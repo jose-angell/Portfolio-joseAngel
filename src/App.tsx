@@ -25,7 +25,7 @@ export default function App() {
   return (
 
     <>
-    <TopNavBar/>
+    <TopNavBar route={route}/>
     {route === 'projects' ? (
       <ProjectsPage/>
     ) : (

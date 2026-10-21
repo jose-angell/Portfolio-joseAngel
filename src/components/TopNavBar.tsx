@@ -1,8 +1,9 @@
 import { useLanguage } from "../context/LanguageContext";
 import { useActiveSection } from "../hooks/useActiveSection";
+import type { Route } from "../hooks/useHashRoute";
 import { Button } from "./ui/button";
 
-export const TopNavBar = () => {
+export const TopNavBar = ({ route }: { route: Route }) => {
   const { t, language, toggleLanguage } = useLanguage();
 
   const navLinks = t('topbar', 'links') as unknown as { name: string; id: string }[];
@@ -10,7 +11,8 @@ export const TopNavBar = () => {
   const sectionIds = navLinks.map(link => link.id);
   
   // Usamos nuestro hook
-  const activeSection = useActiveSection(sectionIds);
+  const observedSection = useActiveSection(sectionIds, route);
+  const activeSection = route === 'projects' ? 'projects' : observedSection;
   return (
     <nav className="fixed top-0 w-full z-50 bg-background/40 backdrop-blur-xl border-b border-white/10 shadow-[0_8px_32px_0_rgba(0,112,243,0.08)]">
       <div className="flex justify-between items-center px-6 py-4 max-w-7xl mx-auto">

@@ -1,7 +1,8 @@
 
 import { useState, useEffect } from 'react';
 
-export function useActiveSection(sectionIds: string[]) {
+// `resetKey` vuelve a registrar el observer cuando cambia la vista y las secciones se montan de nuevo.
+export function useActiveSection(sectionIds: string[], resetKey?: string) {
   const [activeSection, setActiveSection] = useState<string>('');
 
   useEffect(() => {
@@ -28,7 +29,7 @@ export function useActiveSection(sectionIds: string[]) {
 
     // Limpieza de memoria (muy importante en React)
     return () => observer.disconnect();
-  }, [sectionIds]);
+  }, [sectionIds, resetKey]);
 
   return activeSection;
 }

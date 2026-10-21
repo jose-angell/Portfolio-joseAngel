@@ -15,10 +15,9 @@ export default function ProjectGrid() {
             {t('projects', 'title')}
           </h2>
         </div>
-        {/* TODO: Implement view all repos functionality */}
-        <div className="font-label text-outline text-sm cursor-pointer hover:text-tertiary transition-colors">
+        <a href="#/projects" className="font-label text-outline text-sm hover:text-tertiary transition-colors">
           VIEW_ALL_REPOS <span className="text-tertiary">-&gt;</span>
-        </div>
+        </a>
       </div>
 
       <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
