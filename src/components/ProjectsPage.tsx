@@ -3,6 +3,8 @@ import { useLanguage } from "../context/LanguageContext";
 import { translations, type ProjectCategory, type ProjectDetail } from "../i18n/translations";
 import { ProjectDetailDialog } from "./ProjectDetailDialog";
 import { Badge } from "./ui/badge";
+import { Button } from "./ui/button";
+import cvPdf from "../assets/JoseGallardo.pdf";
 
 type Filter = ProjectCategory | "ALL";
 
@@ -172,6 +174,29 @@ export function ProjectsPage() {
           <ProjectTile key={project.id} project={project} onSelect={() => setSelectedId(project.id)} />
         ))}
       </div>
+
+      <section className="mt-32 p-12 bg-background rounded-xl border border-white/10 text-center relative overflow-hidden">
+        <div className="absolute top-0 right-0 p-8 opacity-5 pointer-events-none">
+          <span className="material-symbols-outlined text-[12rem]">memory</span>
+        </div>
+        <h4 className="font-headline text-2xl font-bold mb-4">{page.ctaTitle}</h4>
+        <p className="text-outline mb-8 max-w-lg mx-auto">{page.ctaText}</p>
+        <div className="flex flex-wrap justify-center gap-4">
+          <Button
+            render={<a href="#footer" />}
+            className="bg-primary text-background px-8 py-6 font-headline font-bold uppercase tracking-widest text-xs active:scale-95 transition-transform rounded-lg"
+          >
+            {page.ctaConnect}
+          </Button>
+          <Button
+            render={<a href={cvPdf} target="_blank" rel="noopener noreferrer" />}
+            variant="outline"
+            className="border-white/20 text-on-surface px-8 py-6 font-headline font-bold uppercase tracking-widest text-xs hover:bg-white/5 active:scale-95 transition-transform rounded-lg"
+          >
+            {page.ctaCV}
+          </Button>
+        </div>
+      </section>
 
       <ProjectDetailDialog
         project={selectedProject}
