@@ -32,7 +32,7 @@ function ProjectTile({ project }: { project: ProjectDetail }) {
             ) : (
               <span className="material-symbols-outlined text-primary text-7xl">{project.icon}</span>
             )}
-            <div className="absolute inset-0 bg-gradient-to-r from-surface-container-low via-transparent to-transparent hidden lg:block"></div>
+            <div className="absolute inset-0 bg-linear-to-r from-surface-container-low via-transparent to-transparent hidden lg:block"></div>
           </div>
           <div className="lg:w-2/5 p-8 flex flex-col gap-6">
             <div className="flex justify-between items-start">
@@ -94,7 +94,7 @@ function ProjectTile({ project }: { project: ProjectDetail }) {
         <span className="material-symbols-outlined text-tertiary text-sm">{project.icon}</span>
         <h3 className="font-headline text-2xl font-bold text-on-surface">{project.title}</h3>
       </div>
-      <p className="text-outline text-sm mb-8 leading-relaxed flex-grow">{project.summary}</p>
+      <p className="text-outline text-sm mb-8 leading-relaxed grow">{project.summary}</p>
       {techBadges}
     </div>
   );
@@ -109,7 +109,7 @@ export function ProjectsPage() {
       <header className="mb-20">
         <div className="flex items-center gap-4 mb-4">
           <span className="font-label text-tertiary text-sm tracking-widest uppercase">{page.path}</span>
-          <div className="h-px flex-1 bg-gradient-to-r from-white/20 to-transparent"></div>
+          <div className="h-px flex-1 bg-linear-to-r from-white/20 to-transparent"></div>
         </div>
         <h1 className="font-headline text-6xl md:text-8xl font-bold tracking-tighter text-primary mb-6">
           {page.title}
