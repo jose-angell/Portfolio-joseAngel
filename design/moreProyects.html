@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&amp;family=Space+Grotesk:wght@300;500;700&amp;family=Fira+Code:wght@400;500&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "on-tertiary-fixed-variant": "#095300",
+                    "on-primary-fixed-variant": "#004397",
+                    "inverse-surface": "#e5e2e1",
+                    "on-surface-variant": "#c1c6d7",
+                    "surface-tint": "#aec6ff",
+                    "surface-container-lowest": "#0e0e0e",
+                    "on-secondary-fixed-variant": "#095300",
+                    "secondary-container": "#2ff801",
+                    "outline-variant": "#414754",
+                    "primary-fixed": "#d8e2ff",
+                    "on-secondary-fixed": "#022100",
+                    "surface-variant": "#353534",
+                    "on-primary-fixed": "#001a43",
+                    "on-background": "#e5e2e1",
+                    "on-secondary": "#053900",
+                    "surface": "#131313",
+                    "error-container": "#93000a",
+                    "primary-container": "#0070f3",
+                    "surface-dim": "#131313",
+                    "on-tertiary-container": "#ffffff",
+                    "tertiary": "#2ae500",
+                    "tertiary-fixed-dim": "#2ae500",
+                    "background": "#131313",
+                    "on-primary-container": "#ffffff",
+                    "inverse-primary": "#0059c5",
+                    "surface-container": "#201f1f",
+                    "surface-container-highest": "#353534",
+                    "outline": "#8b90a0",
+                    "surface-bright": "#3a3939",
+                    "inverse-on-surface": "#313030",
+                    "on-primary": "#002e6b",
+                    "secondary-fixed": "#79ff5b",
+                    "on-surface": "#e5e2e1",
+                    "surface-container-low": "#1c1b1b",
+                    "primary-fixed-dim": "#aec6ff",
+                    "on-tertiary": "#053900",
+                    "surface-container-high": "#2a2a2a",
+                    "secondary": "#d7ffc5",
+                    "primary": "#aec6ff",
+                    "secondary-fixed-dim": "#2ae500",
+                    "tertiary-fixed": "#79ff5b",
+                    "on-error-container": "#ffdad6",
+                    "error": "#ffb4ab",
+                    "on-tertiary-fixed": "#022100",
+                    "on-error": "#690005",
+                    "tertiary-container": "#168900",
+                    "on-secondary-container": "#0f6d00"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.125rem",
+                    "lg": "0.25rem",
+                    "xl": "0.5rem",
+                    "full": "0.75rem"
+            },
+            "fontFamily": {
+                    "headline": ["Space Grotesk"],
+                    "body": ["Inter"],
+                    "label": ["Space Grotesk"]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .kinetic-blur {
+            backdrop-filter: blur(20px);
+        }
+        .terminal-cursor::after {
+            content: '_';
+            display: inline-block;
+            margin-left: 4px;
+        }
+    </style>
+</head>
+<body class="bg-surface text-on-surface font-body selection:bg-primary-container selection:text-on-primary-container">
+<!-- TopNavBar -->
+<nav class="fixed top-0 w-full z-50 bg-[#131313]/40 backdrop-blur-xl border-b border-white/10 shadow-[0_8px_32px_0_rgba(0,112,243,0.08)]">
+<div class="flex justify-between items-center px-6 py-4 max-w-7xl mx-auto">
+<div class="font-['Fira_Code'] font-bold text-[#aec6ff] tracking-widest text-lg">
+                JAGC_DEV
+            </div>
+<div class="hidden md:flex items-center space-x-8 font-['Space_Grotesk'] tracking-tighter text-sm uppercase">
+<a class="text-[#8b90a0] hover:text-[#aec6ff] transition-colors hover:bg-white/5 transition-all duration-300 px-2 py-1" href="#">Home</a>
+<a class="text-[#8b90a0] hover:text-[#aec6ff] transition-colors hover:bg-white/5 transition-all duration-300 px-2 py-1" href="#">About</a>
+<a class="text-[#8b90a0] hover:text-[#aec6ff] transition-colors hover:bg-white/5 transition-all duration-300 px-2 py-1" href="#">Skills</a>
+<a class="text-[#8b90a0] hover:text-[#aec6ff] transition-colors hover:bg-white/5 transition-all duration-300 px-2 py-1" href="#">Experience</a>
+<a class="text-[#aec6ff] border-b-2 border-[#aec6ff] pb-1 hover:bg-white/5 transition-all duration-300 px-2" href="#">Projects</a>
+<a class="text-[#8b90a0] hover:text-[#aec6ff] transition-colors hover:bg-white/5 transition-all duration-300 px-2 py-1" href="#">Contact</a>
+</div>
+<button class="bg-[#aec6ff] text-[#002e6b] px-5 py-2 font-['Space_Grotesk'] font-bold text-xs uppercase tracking-wider rounded-lg scale-95 active:scale-90 transition-transform">
+                Hire Me
+            </button>
+</div>
+</nav>
+<main class="pt-32 pb-24 px-6 max-w-7xl mx-auto">
+<!-- Header Section -->
+<header class="mb-20">
+<div class="flex items-center gap-4 mb-4">
+<span class="font-['Fira_Code'] text-tertiary text-sm tracking-widest uppercase">/root/portfolio/projects</span>
+<div class="h-px flex-1 bg-gradient-to-r from-outline-variant to-transparent opacity-30"></div>
+</div>
+<h1 class="font-headline text-6xl md:text-8xl font-bold tracking-tighter text-primary mb-6">
+                Proyectos
+            </h1>
+<p class="max-w-2xl text-on-surface-variant text-lg md:text-xl font-light leading-relaxed">
+                Architecting high-performance systems and building scalable solutions through clean code, modular design, and technical precision.
+            </p>
+</header>
+<!-- Filter Bar -->
+<section class="mb-16 flex flex-wrap items-center gap-3">
+<span class="font-['Fira_Code'] text-xs text-outline uppercase mr-2">$ filter_by:</span>
+<button class="px-4 py-1.5 rounded-lg text-xs font-['Fira_Code'] bg-primary-container text-on-primary-container border border-primary/20">ALL</button>
+<button class="px-4 py-1.5 rounded-lg text-xs font-['Fira_Code'] bg-surface-container-high text-on-surface-variant hover:text-primary hover:bg-surface-variant transition-all border border-outline-variant/10">.NET</button>
+<button class="px-4 py-1.5 rounded-lg text-xs font-['Fira_Code'] bg-surface-container-high text-on-surface-variant hover:text-primary hover:bg-surface-variant transition-all border border-outline-variant/10">REACT</button>
+<button class="px-4 py-1.5 rounded-lg text-xs font-['Fira_Code'] bg-surface-container-high text-on-surface-variant hover:text-primary hover:bg-surface-variant transition-all border border-outline-variant/10">SQL</button>
+<button class="px-4 py-1.5 rounded-lg text-xs font-['Fira_Code'] bg-surface-container-high text-on-surface-variant hover:text-primary hover:bg-surface-variant transition-all border border-outline-variant/10">ARCHITECTURE</button>
+</section>
+<!-- Projects Bento-ish Grid -->
+<div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+<!-- Project 1: Large Featured -->
+<div class="group relative md:col-span-2 bg-surface-container-high/40 kinetic-blur rounded-xl border border-outline-variant/15 overflow-hidden transition-all duration-500 hover:border-primary/40 hover:shadow-[0_20px_40px_rgba(0,112,243,0.08)]">
+<div class="flex flex-col lg:flex-row h-full">
+<div class="lg:w-3/5 relative h-64 lg:h-auto overflow-hidden">
+<img alt="Software Development" class="w-full h-full object-cover grayscale transition-all duration-700 group-hover:grayscale-0 group-hover:scale-105" data-alt="Technical workspace with multiple monitors displaying lines of clean source code in a dark environment with blue lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAWASlEKGj_D2rQYcqQuL0ncI_Ou9zhS-hjTGfr2WIBlk3qDXDhQ_zjgZngmLzbZQgNJKfh8AUVJqET39frhVTsBD-E4VsMC8P-p9xatJwpC3_9Yh9ZbbONeu-Sjhj9fWR93MRZnYxI3hMU2JPdTw4D4ywV5oBXCQ2HKNlTQdszteSHDfa2C4Pbi5HxxDxN4pjok83Wp_JLfT6_QjYo0myafVF6lamWmvWkpj7PTT9ke0QbKNIuMUqtCMkqVRUqauX9kHd0RmjObkw"/>
+<div class="absolute inset-0 bg-gradient-to-r from-surface-container-low via-transparent to-transparent hidden lg:block"></div>
+</div>
+<div class="lg:w-2/5 p-8 flex flex-col justify-between">
+<div>
+<div class="flex justify-between items-start mb-6">
+<span class="font-['Fira_Code'] text-[10px] text-tertiary tracking-[0.2em] uppercase">SYSTEM_DEPLOYED_V8</span>
+<span class="material-symbols-outlined text-primary" data-icon="terminal">terminal</span>
+</div>
+<h3 class="font-headline text-3xl font-bold text-on-surface mb-4">Event Resource Reservation App</h3>
+<p class="text-on-surface-variant text-sm leading-relaxed mb-8">
+                                A high-availability enterprise solution built with Clean Architecture. Designed for managing shared resources across large-scale organizational events with transactional integrity.
+                            </p>
+<div class="flex flex-wrap gap-2 mb-8">
+<span class="px-2 py-1 text-[10px] font-['Fira_Code'] border border-outline-variant/30 rounded text-outline group-hover:border-primary/40 group-hover:text-primary transition-colors">.NET 8</span>
+<span class="px-2 py-1 text-[10px] font-['Fira_Code'] border border-outline-variant/30 rounded text-outline group-hover:border-primary/40 group-hover:text-primary transition-colors">POSTGRESQL</span>
+<span class="px-2 py-1 text-[10px] font-['Fira_Code'] border border-outline-variant/30 rounded text-outline group-hover:border-primary/40 group-hover:text-primary transition-colors">DOCKER</span>
+<span class="px-2 py-1 text-[10px] font-['Fira_Code'] border border-outline-variant/30 rounded text-outline group-hover:border-primary/40 group-hover:text-primary transition-colors">XUNIT</span>
+</div>
+</div>
+<a class="inline-flex items-center gap-2 font-['Fira_Code'] text-xs text-on-surface hover:text-tertiary transition-colors terminal-cursor" href="#">
+                            VIEW_CODE
+                        </a>
+</div>
+</div>
+</div>
+<!-- Project 2 -->
+<div class="group bg-surface-container-high/40 kinetic-blur rounded-xl border border-outline-variant/15 p-8 transition-all duration-500 hover:border-primary/40 hover:shadow-[0_20px_40px_rgba(0,112,243,0.08)]">
+<div class="mb-6 h-48 rounded-lg overflow-hidden border border-outline-variant/10">
+<img alt="Server Hardware" class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-700" data-alt="Digital representation of complex data infrastructure and cloud server nodes with glowing blue and green connections" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCTr7-cRI0aogC_02lKbstmaqRoLQ2Wh7UPWbagh-exC_Y_66EyQtiB6R15XcU-6PF6AwRnwaPeL0z7zjGzw7aHjXUzM_dwGy87zWZCx93DJpmgMLTKv5-r2g9j4ao90Ieb8PmBqw8jwPfyM5qbHRVu_YY_gWIhKTfxhJn2r5ofcQ9ZqDLpDMeZC44gOAJ_M2Dsh-NUdo4gtqy6ln_HpFfulsSlk_3OgEqpAWWzTmMep2WCcoqFrfoRGeP62wQ5nav5vc6ir0YeO4o"/>
+</div>
+<div class="flex items-center gap-3 mb-4">
+<span class="material-symbols-outlined text-tertiary text-sm" data-icon="shopping_cart" data-weight="fill">shopping_cart</span>
+<h3 class="font-headline text-2xl font-bold text-on-surface">E-Commerce Razor Pages</h3>
+</div>
+<p class="text-on-surface-variant text-sm mb-8 leading-relaxed">
+                    Full-stack retail platform implementation utilizing Razor Pages for robust server-side rendering and SQL Server for structured product data management.
+                </p>
+<div class="flex flex-wrap gap-2 mb-8">
+<span class="px-2 py-1 text-[10px] font-['Fira_Code'] border border-outline-variant/30 rounded text-outline group-hover:text-primary">C#</span>
+<span class="px-2 py-1 text-[10px] font-['Fira_Code'] border border-outline-variant/30 rounded text-outline group-hover:text-primary">.NET</span>
+<span class="px-2 py-1 text-[10px] font-['Fira_Code'] border border-outline-variant/30 rounded text-outline group-hover:text-primary">RAZOR_PAGES</span>
+<span class="px-2 py-1 text-[10px] font-['Fira_Code'] border border-outline-variant/30 rounded text-outline group-hover:text-primary">SQL_SERVER</span>
+</div>
+<a class="inline-flex items-center gap-2 font-['Fira_Code'] text-xs text-on-surface hover:text-tertiary transition-colors terminal-cursor" href="#">
+                    EXECUTE_SRC
+                </a>
+</div>
+<!-- Project 3 -->
+<div class="group bg-surface-container-high/40 kinetic-blur rounded-xl border border-outline-variant/15 p-8 transition-all duration-500 hover:border-primary/40 hover:shadow-[0_20px_40px_rgba(0,112,243,0.08)]">
+<div class="mb-6 h-48 rounded-lg overflow-hidden border border-outline-variant/10">
+<img alt="Data Visualization" class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-700" data-alt="Abstract data migration visualization with light particles moving between two glowing server racks in a dark data center" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCC3pY6Gq2IkAvb1utevdHuOGDKLQEgYNbQHjOQQENtsxj1GTlyPrpzC4xGRjUelzx82Qvwx2ZdPsEdCWhGYzoTsl4M-YQ1bwErpmK8XSQ-CnRaNzsIEVAIVM_Si05K6B5qDQaz7UHxJkeN2I2OwGQfzSK2nH4Yqa2dd1idYwJ2DoDM1vybqwDRLyfae2vYVdaVDlCns1hbcu66Iq14TpQqLaHTMLAqhKmkdzMrRJPHK58GjGSwPFpRvl9bVPHoYX5lGn5sZzyxfV0"/>
+</div>
+<div class="flex items-center gap-3 mb-4">
+<span class="material-symbols-outlined text-tertiary text-sm" data-icon="database_migration" data-weight="fill">migration</span>
+<h3 class="font-headline text-2xl font-bold text-on-surface">Sistema Vigencia</h3>
+</div>
+<p class="text-on-surface-variant text-sm mb-8 leading-relaxed">
+                    Critical data infrastructure migration project moving large-scale datasets from PostgreSQL to SQL Server while ensuring zero data loss and schema integrity.
+                </p>
+<div class="flex flex-wrap gap-2 mb-8">
+<span class="px-2 py-1 text-[10px] font-['Fira_Code'] border border-outline-variant/30 rounded text-outline group-hover:text-primary">POSTGRESQL</span>
+<span class="px-2 py-1 text-[10px] font-['Fira_Code'] border border-outline-variant/30 rounded text-outline group-hover:text-primary">MSSQL</span>
+<span class="px-2 py-1 text-[10px] font-['Fira_Code'] border border-outline-variant/30 rounded text-outline group-hover:text-primary">ETL_LOGIC</span>
+</div>
+<a class="inline-flex items-center gap-2 font-['Fira_Code'] text-xs text-on-surface hover:text-tertiary transition-colors terminal-cursor" href="#">
+                    MIGRATION_LOGS
+                </a>
+</div>
+<!-- Project 4: XML processing -->
+<div class="group relative md:col-span-2 bg-surface-container-low kinetic-blur rounded-xl border-l-4 border-l-tertiary p-10 flex flex-col md:flex-row justify-between items-center gap-8 transition-all duration-300 hover:bg-surface-container">
+<div class="flex-1">
+<div class="flex items-center gap-2 mb-2">
+<span class="w-2 h-2 rounded-full bg-tertiary"></span>
+<span class="font-['Fira_Code'] text-[10px] text-on-surface-variant uppercase tracking-widest">Active Data Stream</span>
+</div>
+<h3 class="font-headline text-3xl font-bold text-on-surface mb-3">Proyecto Reintegro</h3>
+<p class="text-on-surface-variant max-w-xl text-sm leading-relaxed mb-6">
+                        An automated data processing engine designed to handle complex XML structures for financial reimbursement systems. Optimizing parsing efficiency and data validation pipelines.
+                    </p>
+<div class="flex flex-wrap gap-4">
+<span class="text-xs font-['Fira_Code'] text-primary"># XML_PARSER</span>
+<span class="text-xs font-['Fira_Code'] text-primary"># C#_LOGIC</span>
+<span class="text-xs font-['Fira_Code'] text-primary"># DATA_TRANSFORM</span>
+</div>
+</div>
+<div class="flex flex-col items-end gap-4">
+<div class="w-32 h-32 flex items-center justify-center rounded-full border border-outline-variant/20 group-hover:border-tertiary/40 transition-all duration-500">
+<span class="material-symbols-outlined text-4xl text-outline-variant group-hover:text-tertiary group-hover:scale-110 transition-all duration-500" data-icon="data_object">data_object</span>
+</div>
+<a class="bg-surface-container-highest px-6 py-2 rounded font-['Fira_Code'] text-[10px] uppercase tracking-widest hover:bg-tertiary hover:text-on-tertiary transition-all" href="#">
+                        OPEN_MODULE
+                    </a>
+</div>
+</div>
+</div>
+<!-- Tech Stack CTA -->
+<section class="mt-32 p-12 bg-surface-container-lowest rounded-xl border border-outline-variant/10 text-center relative overflow-hidden">
+<div class="absolute top-0 right-0 p-8 opacity-5">
+<span class="material-symbols-outlined text-[12rem]" data-icon="memory">memory</span>
+</div>
+<h4 class="font-headline text-2xl font-bold mb-4">Building the next generation of software?</h4>
+<p class="text-on-surface-variant mb-8 max-w-lg mx-auto">I'm currently open to collaborating on high-impact projects and engineering roles that challenge the status quo.</p>
+<div class="flex justify-center gap-4">
+<button class="bg-primary text-on-primary px-8 py-3 font-['Space_Grotesk'] font-bold uppercase tracking-widest text-xs transition-transform active:scale-95">Let's Connect</button>
+<button class="border border-outline-variant px-8 py-3 font-['Space_Grotesk'] font-bold uppercase tracking-widest text-xs hover:border-primary transition-colors transition-transform active:scale-95">View CV</button>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-[#1c1b1b] w-full py-12 px-6">
+<div class="flex flex-col md:flex-row justify-between items-center gap-4 max-w-7xl mx-auto">
+<div class="font-['Fira_Code'] text-xs uppercase tracking-widest text-[#2ae500]">
+                © 2024 José Ángel Gallardo Córdova. Terminal_v2.0.4
+            </div>
+<div class="flex gap-8">
+<a class="font-['Fira_Code'] text-xs uppercase tracking-widest text-[#8b90a0] hover:text-[#2ae500] transition-opacity duration-200 underline decoration-dotted" href="#">LinkedIn</a>
+<a class="font-['Fira_Code'] text-xs uppercase tracking-widest text-[#8b90a0] hover:text-[#2ae500] transition-opacity duration-200 underline decoration-dotted" href="#">GitHub</a>
+<a class="font-['Fira_Code'] text-xs uppercase tracking-widest text-[#8b90a0] hover:text-[#2ae500] transition-opacity duration-200 underline decoration-dotted" href="#">Source Code</a>
+</div>
+<div class="text-[#aec6ff] font-bold font-['Fira_Code'] text-sm">
+                JAGC_DEV
+            </div>
+</div>
+</footer>
+</body></html>
