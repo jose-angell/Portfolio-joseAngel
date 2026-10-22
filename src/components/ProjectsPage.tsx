@@ -207,6 +207,7 @@ export function ProjectsPage() {
           viewCode: page.viewCode,
           viewDemo: page.viewDemo,
           privateLabel: page.privateLabel,
+          close: page.modalClose,
         }}
         onClose={() => setSelectedId(null)}
       />

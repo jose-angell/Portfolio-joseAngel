@@ -1,5 +1,6 @@
 /* src/index.css */
 @import "tailwindcss";
+@import "tw-animate-css";
 
 /* Tus estilos personalizados deben ir DEBAJO del import */
 @layer base {

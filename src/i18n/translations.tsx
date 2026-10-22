@@ -119,6 +119,7 @@ export const translations = {
       viewCode: "Ver código",
       viewDemo: "Ver demo",
       privateLabel: "Código privado",
+      modalClose: "Cerrar",
       items: [
         {
           id: "event-reservation",
@@ -301,6 +302,7 @@ export const translations = {
       viewCode: "View code",
       viewDemo: "View demo",
       privateLabel: "Private code",
+      modalClose: "Close",
       items: [
         {
           id: "event-reservation",

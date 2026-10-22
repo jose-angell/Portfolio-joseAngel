@@ -1,7 +1,9 @@
 import { useState } from "react";
 import type { ProjectDetail } from "../i18n/translations";
-import { Dialog, DialogContent, DialogDescription, DialogHeader, DialogTitle } from "./ui/dialog";
+import { XIcon } from "lucide-react";
+import { Dialog, DialogClose, DialogContent, DialogDescription, DialogHeader, DialogTitle } from "./ui/dialog";
 import { Badge } from "./ui/badge";
+import { Button } from "./ui/button";
 
 interface ProjectDetailDialogProps {
   project: ProjectDetail | null;
@@ -12,6 +14,7 @@ interface ProjectDetailDialogProps {
     viewCode: string;
     viewDemo: string;
     privateLabel: string;
+    close: string;
   };
   onClose: () => void;
 }
@@ -57,9 +60,26 @@ function ProjectGallery({ project }: { project: ProjectDetail }) {
 export function ProjectDetailDialog({ project, labels, onClose }: ProjectDetailDialogProps) {
   return (
     <Dialog open={project !== null} onOpenChange={(open) => !open && onClose()}>
-      <DialogContent className="sm:max-w-2xl max-h-[85vh] overflow-y-auto bg-background text-on-surface ring-white/10 p-6 gap-6">
+      <DialogContent
+        showCloseButton={false}
+        className="fixed inset-0 m-auto h-fit translate-x-0 translate-y-0 w-[calc(100%-2rem)] sm:max-w-2xl max-h-[85vh] flex flex-col overflow-hidden bg-background text-on-surface ring-white/10 p-0 gap-0"
+      >
+        <div className="flex justify-end px-3 pt-3 shrink-0">
+          <DialogClose
+            render={
+              <Button
+                variant="ghost"
+                size="icon-sm"
+                aria-label={labels.close}
+                className="text-outline hover:text-on-surface hover:bg-white/5"
+              />
+            }
+          >
+            <XIcon />
+          </DialogClose>
+        </div>
         {project && (
-          <>
+          <div className="overflow-y-auto p-6 pt-2 flex flex-col gap-6">
             <DialogHeader>
               <span className="font-label text-[10px] text-tertiary tracking-[0.2em] uppercase">
                 {project.statusLabel}
@@ -138,7 +158,7 @@ export function ProjectDetailDialog({ project, labels, onClose }: ProjectDetailD
                 </a>
               )}
             </div>
-          </>
+          </div>
         )}
       </DialogContent>
     </Dialog>
