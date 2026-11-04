@@ -1,5 +1,6 @@
 import layoutBookit from "../assets/layoutBookit.png";
 import layoutWorkshopAdmin from "../assets/workshopAdmin.png";
+import procureFlowLoging from "../assets/procureFlowLoging.png";
 
 export type ProjectCategory = ".NET" | "FRONTEND" | "SQL" | "ARCHITECTURE";
 export type ProjectVariant = "featured" | "standard" | "horizontal";
@@ -100,7 +101,25 @@ export const translations = {
         technologies: ["Blazor WebAssembly", ".NET 10", "C#","ASP.NET Core", "PostgreSQL", "JWT","EF Core"],
         projectUrl: "#",
         sourceCodeUrl: "https://github.com/jose-angell/WorkshopAdmin" 
-      }
+      },
+      {
+        title: "ProcureFlow",
+        description: "Sistema full stack para gestionar solicitudes internas de compra y sus aprobaciones. Desarrollado con .NET 10, ASP.NET Core y React con TypeScript. Implementa Clean Architecture, modelado de dominio, reglas de transición de estados, autenticación JWT, autorización por roles y departamentos, persistencia con PostgreSQL y pruebas automatizadas.",
+        imageUrl: procureFlowLoging,
+        imageAlt: "Interfaz de inicio de sesión de ProcureFlow",
+        technologies: [
+          ".NET 10",
+          "C#",
+          "ASP.NET Core",
+          "React",
+          "TypeScript",
+          "PostgreSQL",
+          "EF Core",
+          "JWT",
+          "xUnit"
+        ],
+        sourceCodeUrl: "https://github.com/jose-angell/ProcureFlow"
+      },
     ]
     },
     projectsPage: {
@@ -164,6 +183,47 @@ export const translations = {
           technologies: ["Blazor WebAssembly", ".NET 10", "C#", "ASP.NET Core", "PostgreSQL", "JWT", "EF Core"],
           images: [{ src: layoutWorkshopAdmin, alt: "Panel de gestión de talleres y servicios" }],
           sourceCodeUrl: "https://github.com/jose-angell/WorkshopAdmin"
+        },
+        {
+          id: "procureflow",
+          title: "ProcureFlow",
+          statusLabel: "FULL_STACK_MVP",
+          icon: "account_tree",
+          variant: "featured",
+          categories: [".NET", "FRONTEND", "SQL", "ARCHITECTURE"],
+          summary: "Sistema full stack de gestión y aprobación de solicitudes de compra con .NET 10, React, Clean Architecture y autenticación JWT.",
+          longDescription: "ProcureFlow es una plataforma empresarial para administrar solicitudes internas de compra mediante un flujo de creación, revisión y aprobación. El backend está desarrollado con .NET 10 y ASP.NET Core, aplicando Clean Architecture y modelado de dominio para encapsular reglas de negocio y transiciones de estado. Incorpora autenticación JWT, autorización contextual por roles y departamentos, y persistencia con PostgreSQL mediante Entity Framework Core. El frontend utiliza React, TypeScript, Vite y shadcn/ui, con una arquitectura organizada por funcionalidades. Incluye pruebas de dominio, aplicación e integración HTTP.",
+          highlights: [
+            "Modelado de dominio con PurchaseRequest como Aggregate Root y reglas de transición de estados.",
+            "Clean Architecture con separación entre Domain, Application, Infrastructure y API.",
+            "Autenticación JWT y autorización contextual mediante roles, departamentos y propiedad de solicitudes.",
+            "Frontend React y TypeScript con arquitectura basada en funcionalidades y componentes shadcn/ui.",
+            "Persistencia PostgreSQL con Entity Framework Core y configuraciones Fluent API.",
+            "Pruebas automatizadas de dominio, casos de uso e integración HTTP con xUnit y WebApplicationFactory.",
+            "Desarrollo frontend asistido por IA mediante Claude Code, especificaciones y decisiones arquitectónicas documentadas."
+          ],
+          role: "Desarrollador Full Stack",
+          context: "Proyecto personal",
+          technologies: [
+            ".NET 10",
+            "C#",
+            "ASP.NET Core",
+            "React",
+            "TypeScript",
+            "Vite",
+            "shadcn/ui",
+            "PostgreSQL",
+            "EF Core",
+            "JWT",
+            "xUnit"
+          ],
+          images: [
+            {
+              src: procureFlowLoging,
+              alt: "Interfaz de autenticación de ProcureFlow"
+            }
+          ],
+          sourceCodeUrl: "https://github.com/jose-angell/ProcureFlow"
         },
         {
           id: "vigencia",
@@ -283,7 +343,25 @@ export const translations = {
         technologies: ["Blazor WebAssembly", ".NET 10", "C#","ASP.NET Core", "PostgreSQL", "JWT","EF Core"],
         projectUrl: "#",
         sourceCodeUrl: "https://github.com/jose-angell/WorkshopAdmin" 
-      }
+      },
+      {
+        title: "ProcureFlow",
+        description: "Full-stack application for managing internal purchase requests and approval workflows. Built with .NET 10, ASP.NET Core, React, and TypeScript. Features Clean Architecture, domain modeling, workflow state transitions, JWT authentication, role- and department-based authorization, PostgreSQL persistence, and automated testing.",
+        imageUrl: procureFlowLoging,
+        imageAlt: "ProcureFlow login interface",
+        technologies: [
+          ".NET 10",
+          "C#",
+          "ASP.NET Core",
+          "React",
+          "TypeScript",
+          "PostgreSQL",
+          "EF Core",
+          "JWT",
+          "xUnit"
+        ],
+        sourceCodeUrl: "https://github.com/jose-angell/ProcureFlow"
+      },
     ]
     },
     projectsPage: {
@@ -347,6 +425,47 @@ export const translations = {
           technologies: ["Blazor WebAssembly", ".NET 10", "C#", "ASP.NET Core", "PostgreSQL", "JWT", "EF Core"],
           images: [{ src: layoutWorkshopAdmin, alt: "Workshop and service management dashboard" }],
           sourceCodeUrl: "https://github.com/jose-angell/WorkshopAdmin"
+        },
+        {
+          id: "procureflow",
+          title: "ProcureFlow",
+          statusLabel: "FULL_STACK_MVP",
+          icon: "account_tree",
+          variant: "featured",
+          categories: [".NET", "FRONTEND", "SQL", "ARCHITECTURE"],
+          summary: "Full-stack purchase request and approval management system built with .NET 10, React, Clean Architecture, and JWT authentication.",
+          longDescription: "ProcureFlow is an enterprise application for managing internal purchase requests through creation, review, and approval workflows. The backend is built with .NET 10 and ASP.NET Core, applying Clean Architecture and domain modeling to encapsulate business rules and state transitions. It includes JWT authentication, contextual authorization based on roles, departments, and resource ownership, and PostgreSQL persistence through Entity Framework Core. The frontend uses React, TypeScript, Vite, and shadcn/ui with a feature-based architecture. The project includes domain, application, and HTTP integration tests.",
+          highlights: [
+            "Domain modeling with PurchaseRequest as an Aggregate Root, enforcing business invariants and workflow transitions.",
+            "Clean Architecture separating Domain, Application, Infrastructure, and API responsibilities.",
+            "JWT authentication and contextual authorization based on roles, departments, and request ownership.",
+            "React and TypeScript frontend with feature-based architecture and shadcn/ui components.",
+            "PostgreSQL persistence using Entity Framework Core and Fluent API configurations.",
+            "Automated domain, application, and HTTP integration tests using xUnit and WebApplicationFactory.",
+            "AI-assisted frontend development using Claude Code, feature specifications, and documented architectural decisions."
+          ],
+          role: "Full Stack Developer",
+          context: "Personal project",
+          technologies: [
+            ".NET 10",
+            "C#",
+            "ASP.NET Core",
+            "React",
+            "TypeScript",
+            "Vite",
+            "shadcn/ui",
+            "PostgreSQL",
+            "EF Core",
+            "JWT",
+            "xUnit"
+          ],
+          images: [
+            {
+              src: procureFlowLoging,
+              alt: "ProcureFlow authentication interface"
+            }
+          ],
+          sourceCodeUrl: "https://github.com/jose-angell/ProcureFlow"
         },
         {
           id: "vigencia",
