@@ -1,6 +1,6 @@
 import { Button } from "./ui/button"
 import { useLanguage } from "../context/LanguageContext";
-import cvPdf from '../assets/JoseGallardo.pdf'
+import cvPdf from '../assets/joseGallardo.pdf'
 
 export const Hero = () => {
   const { t } = useLanguage();
