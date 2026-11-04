@@ -4,7 +4,7 @@ import { translations, type ProjectCategory, type ProjectDetail } from "../i18n/
 import { ProjectDetailDialog } from "./ProjectDetailDialog";
 import { Badge } from "./ui/badge";
 import { Button } from "./ui/button";
-import cvPdf from "../assets/JoseGallardo.pdf";
+import cvPdf from "../assets/joseGallardo.pdf";
 
 type Filter = ProjectCategory | "ALL";
 

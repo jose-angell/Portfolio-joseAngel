@@ -1,6 +1,6 @@
 import layoutBookit from "../assets/layoutBookit.png";
 import layoutWorkshopAdmin from "../assets/workshopAdmin.png";
-import procureFlowLoging from "../assets/procureFlowLoging.png";
+import procureFlowLoging from "../assets/procureFlowLogin.png";
 
 export type ProjectCategory = ".NET" | "FRONTEND" | "SQL" | "ARCHITECTURE";
 export type ProjectVariant = "featured" | "standard" | "horizontal";
