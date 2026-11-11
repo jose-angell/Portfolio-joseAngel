@@ -5,6 +5,11 @@ import procureFlowLoging from "../assets/procureFlowLogin.png";
 export type ProjectCategory = ".NET" | "FRONTEND" | "SQL" | "ARCHITECTURE";
 export type ProjectVariant = "featured" | "standard" | "horizontal";
 
+export interface ProjectStat {
+  label: string;
+  value: string;
+}
+
 export interface ProjectDetail {
   id: string;
   title: string;
@@ -21,6 +26,7 @@ export interface ProjectDetail {
   images: { src: string; alt: string }[];
   sourceCodeUrl?: string;
   projectUrl?: string;
+  stats?: ProjectStat[];
 }
 
 export const translations = {
@@ -133,6 +139,7 @@ export const translations = {
       ctaConnect: "Contactar",
       ctaCV: "Ver CV",
       modalHighlights: "Aspectos destacados",
+      modalTechStack: "// Stack técnico",
       modalRole: "Rol",
       modalContext: "Contexto",
       viewCode: "Ver código",
@@ -147,6 +154,12 @@ export const translations = {
           icon: "terminal",
           variant: "featured",
           categories: [".NET", "SQL", "ARCHITECTURE"],
+          stats: [
+            { label: "Backend", value: ".NET 8" },
+            { label: "Persistencia", value: "PostgreSQL" },
+            { label: "Testing", value: "xUnit" },
+            { label: "Deploy", value: "Docker" }
+          ],
           summary: "Backend en .NET 8 para reservar recursos de eventos, con autenticación JWT, reglas de disponibilidad por rango de fechas y pruebas unitarias.",
           longDescription: "Plataforma de reserva de recursos para eventos con backend desarrollado en .NET 8. Implementa una API REST con autenticación y autorización mediante JWT y ASP.NET Core Identity, persistencia con PostgreSQL y Entity Framework Core, reglas de disponibilidad por rango de fechas, logging con Serilog, Docker y pruebas unitarias sobre dominio y casos de uso.",
           highlights: [
@@ -169,6 +182,12 @@ export const translations = {
           icon: "build",
           variant: "standard",
           categories: [".NET", "FRONTEND", "SQL", "ARCHITECTURE"],
+          stats: [
+            { label: "Frontend", value: "Blazor WASM" },
+            { label: "Backend", value: ".NET 10" },
+            { label: "Persistencia", value: "PostgreSQL" },
+            { label: "Arquitectura", value: "Modular por capas" }
+          ],
           summary: "Sistema full stack con .NET 10 y Blazor WebAssembly para administrar clientes, equipos, órdenes de servicio e inventario de talleres técnicos.",
           longDescription: "Sistema full stack para la gestión de talleres técnicos desarrollado con .NET 10 y Blazor WebAssembly. Permite administrar clientes, equipos, órdenes de servicio e inventario, incorporando reglas de transición de estados, control de stock, autenticación JWT y persistencia con PostgreSQL mediante Entity Framework Core dentro de una arquitectura modular por capas.",
           highlights: [
@@ -191,6 +210,12 @@ export const translations = {
           icon: "account_tree",
           variant: "featured",
           categories: [".NET", "FRONTEND", "SQL", "ARCHITECTURE"],
+          stats: [
+            { label: "Arquitectura", value: "Clean Architecture" },
+            { label: "Frontend", value: "React + TS" },
+            { label: "Persistencia", value: "PostgreSQL" },
+            { label: "Testing", value: "xUnit" }
+          ],
           summary: "Sistema full stack de gestión y aprobación de solicitudes de compra con .NET 10, React, Clean Architecture y autenticación JWT.",
           longDescription: "ProcureFlow es una plataforma empresarial para administrar solicitudes internas de compra mediante un flujo de creación, revisión y aprobación. El backend está desarrollado con .NET 10 y ASP.NET Core, aplicando Clean Architecture y modelado de dominio para encapsular reglas de negocio y transiciones de estado. Incorpora autenticación JWT, autorización contextual por roles y departamentos, y persistencia con PostgreSQL mediante Entity Framework Core. El frontend utiliza React, TypeScript, Vite y shadcn/ui, con una arquitectura organizada por funcionalidades. Incluye pruebas de dominio, aplicación e integración HTTP.",
           highlights: [
@@ -375,6 +400,7 @@ export const translations = {
       ctaConnect: "Let's Connect",
       ctaCV: "View CV",
       modalHighlights: "Highlights",
+      modalTechStack: "// Tech stack",
       modalRole: "Role",
       modalContext: "Context",
       viewCode: "View code",
@@ -389,6 +415,12 @@ export const translations = {
           icon: "terminal",
           variant: "featured",
           categories: [".NET", "SQL", "ARCHITECTURE"],
+          stats: [
+            { label: "Backend", value: ".NET 8" },
+            { label: "Persistence", value: "PostgreSQL" },
+            { label: "Testing", value: "xUnit" },
+            { label: "Deploy", value: "Docker" }
+          ],
           summary: ".NET 8 backend for reserving event resources, with JWT authentication, date-range availability rules, and unit tests.",
           longDescription: "Resource reservation platform for events with a backend built on .NET 8. It provides REST APIs with JWT and ASP.NET Core Identity authentication and authorization, PostgreSQL persistence with Entity Framework Core, date-range availability rules, structured logging with Serilog, Docker-based local setup, and unit tests covering domain rules and application use cases.",
           highlights: [
@@ -411,6 +443,12 @@ export const translations = {
           icon: "build",
           variant: "standard",
           categories: [".NET", "FRONTEND", "SQL", "ARCHITECTURE"],
+          stats: [
+            { label: "Frontend", value: "Blazor WASM" },
+            { label: "Backend", value: ".NET 10" },
+            { label: "Persistence", value: "PostgreSQL" },
+            { label: "Architecture", value: "Modular layered" }
+          ],
           summary: "Full-stack system built with .NET 10 and Blazor WebAssembly to manage customers, equipment, service orders, and inventory for technical workshops.",
           longDescription: "Full-stack management system for technical workshops built with .NET 10 and Blazor WebAssembly. It manages customers, equipment, service orders, and inventory while enforcing workflow state transitions, stock rules, JWT authentication, and PostgreSQL persistence through Entity Framework Core within a modular layered architecture.",
           highlights: [
@@ -433,6 +471,12 @@ export const translations = {
           icon: "account_tree",
           variant: "featured",
           categories: [".NET", "FRONTEND", "SQL", "ARCHITECTURE"],
+          stats: [
+            { label: "Architecture", value: "Clean Architecture" },
+            { label: "Frontend", value: "React + TS" },
+            { label: "Persistence", value: "PostgreSQL" },
+            { label: "Testing", value: "xUnit" }
+          ],
           summary: "Full-stack purchase request and approval management system built with .NET 10, React, Clean Architecture, and JWT authentication.",
           longDescription: "ProcureFlow is an enterprise application for managing internal purchase requests through creation, review, and approval workflows. The backend is built with .NET 10 and ASP.NET Core, applying Clean Architecture and domain modeling to encapsulate business rules and state transitions. It includes JWT authentication, contextual authorization based on roles, departments, and resource ownership, and PostgreSQL persistence through Entity Framework Core. The frontend uses React, TypeScript, Vite, and shadcn/ui with a feature-based architecture. The project includes domain, application, and HTTP integration tests.",
           highlights: [
