@@ -27,19 +27,19 @@ function ProjectGallery({ project }: { project: ProjectDetail }) {
 
   return (
     <div className="space-y-3">
-      <div className="rounded-lg border border-outline-variant/20 bg-surface-container-lowest overflow-hidden shadow-inner">
-        <div className="flex items-center justify-between gap-3 px-4 py-2 bg-surface-container-high/60 border-b border-outline-variant/15 text-xs font-label text-outline">
+      <div className="rounded-lg border border-[#414754]/20 bg-[#0e0e0e] overflow-hidden shadow-inner">
+        <div className="flex items-center justify-between gap-3 px-4 py-2 bg-surface-container-high/60 border-b border-[#414754]/15 text-xs font-label text-outline">
           <div className="flex items-center gap-2 min-w-0">
             <span className="material-symbols-outlined text-sm text-primary">terminal</span>
             <span className="truncate">{project.id}.app</span>
           </div>
           <span className="text-[11px] text-tertiary shrink-0">{project.categories.join(" · ")}</span>
         </div>
-        <div className="relative h-64 sm:h-72 w-full overflow-hidden bg-surface-container-lowest flex items-center justify-center">
+        <div className="relative h-64 sm:h-72 w-full overflow-hidden bg-[#0e0e0e] flex items-center justify-center">
           {image ? (
             <>
               <img alt={image.alt} src={image.src} className="w-full h-full object-cover opacity-85" />
-              <div className="absolute inset-0 bg-linear-to-t from-surface-container-lowest via-transparent to-transparent"></div>
+              <div className="absolute inset-0 bg-linear-to-t from-[#0e0e0e] via-transparent to-transparent"></div>
             </>
           ) : (
             <span className="material-symbols-outlined text-primary text-8xl">{project.icon}</span>
@@ -109,7 +109,7 @@ export function ProjectDetailDialog({ project, projectIndex, labels, onClose }: 
                 {project.stats.map((stat) => (
                   <div
                     key={stat.label}
-                    className="p-4 rounded-lg bg-surface-container-high/40 border border-outline-variant/15"
+                    className="p-4 rounded-lg bg-surface-container-high/40 border border-[#414754]/15"
                   >
                     <span className="block font-label text-[11px] text-outline uppercase tracking-wider mb-1">
                       {stat.label}
@@ -125,11 +125,11 @@ export function ProjectDetailDialog({ project, projectIndex, labels, onClose }: 
                 <span className="material-symbols-outlined text-sm text-primary">account_tree</span>
                 {labels.highlights}
               </h3>
-              <ul className="space-y-3 text-sm text-on-surface-variant">
+              <ul className="space-y-3 text-sm text-[#c1c6d7]">
                 {project.highlights.map((highlight) => (
                   <li
                     key={highlight}
-                    className="flex items-start gap-3 p-3 rounded-lg bg-surface-container-high/20 border border-outline-variant/10 hover:border-primary/30 transition-colors"
+                    className="flex items-start gap-3 p-3 rounded-lg bg-surface-container-high/20 border border-[#414754]/10 hover:border-primary/30 transition-colors"
                   >
                     <span className="font-label text-tertiary font-bold mt-0.5">&gt;</span>
                     <span>{highlight}</span>
@@ -167,7 +167,7 @@ export function ProjectDetailDialog({ project, projectIndex, labels, onClose }: 
                 render={
                   <Button
                     variant="outline"
-                    className="border-white/20 text-outline hover:text-on-surface hover:bg-white/5 uppercase tracking-wider font-headline font-bold text-xs rounded"
+                    className="border-[#414754]/30 text-[#c1c6d7] hover:text-white hover:bg-white/5 uppercase tracking-wider font-headline font-bold text-xs rounded"
                   />
                 }
               >
@@ -189,7 +189,7 @@ export function ProjectDetailDialog({ project, projectIndex, labels, onClose }: 
                   href={project.sourceCodeUrl}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-flex items-center gap-2 px-5 py-2 bg-primary text-background hover:bg-primary-fixed rounded uppercase tracking-wider font-headline font-bold transition-all active:scale-95"
+                  className="inline-flex items-center gap-2 bg-primary text-black font-label text-xs uppercase tracking-widest font-bold hover:scale-105 active:scale-95 transition-transform rounded-lg px-5 py-2"
                 >
                   <span className="material-symbols-outlined text-sm">code</span>
                   {labels.viewCode}
