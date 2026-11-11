@@ -27,12 +27,24 @@ function ProjectGallery({ project }: { project: ProjectDetail }) {
 
   return (
     <div className="space-y-3">
-      <div className="rounded-lg overflow-hidden border border-white/5 bg-surface-container-low aspect-video flex items-center justify-center">
-        {image ? (
-          <img alt={image.alt} src={image.src} className="w-full h-full object-cover" />
-        ) : (
-          <span className="material-symbols-outlined text-primary text-6xl">{project.icon}</span>
-        )}
+      <div className="rounded-lg border border-outline-variant/20 bg-surface-container-lowest overflow-hidden shadow-inner">
+        <div className="flex items-center justify-between gap-3 px-4 py-2 bg-surface-container-high/60 border-b border-outline-variant/15 text-xs font-label text-outline">
+          <div className="flex items-center gap-2 min-w-0">
+            <span className="material-symbols-outlined text-sm text-primary">terminal</span>
+            <span className="truncate">{project.id}.app</span>
+          </div>
+          <span className="text-[11px] text-tertiary shrink-0">{project.categories.join(" · ")}</span>
+        </div>
+        <div className="relative h-64 sm:h-72 w-full overflow-hidden bg-surface-container-lowest flex items-center justify-center">
+          {image ? (
+            <>
+              <img alt={image.alt} src={image.src} className="w-full h-full object-cover opacity-85" />
+              <div className="absolute inset-0 bg-linear-to-t from-surface-container-lowest via-transparent to-transparent"></div>
+            </>
+          ) : (
+            <span className="material-symbols-outlined text-primary text-8xl">{project.icon}</span>
+          )}
+        </div>
       </div>
       {project.images.length > 1 && (
         <div className="flex gap-2">
@@ -74,10 +86,15 @@ export function ProjectDetailDialog({ project, projectIndex, labels, onClose }: 
         {project && (
           <div className="overflow-y-auto p-6 flex flex-col gap-6 grow">
             <DialogHeader>
-              <span className="font-label text-[10px] text-tertiary tracking-[0.2em] uppercase">
-                {project.statusLabel}
-              </span>
-              <DialogTitle className="font-headline text-3xl font-bold leading-tight">
+              <div className="flex flex-wrap items-center gap-2">
+                <span className="px-2 py-0.5 text-[10px] font-label bg-tertiary/10 text-tertiary border border-tertiary/30 rounded uppercase tracking-wider">
+                  {project.context}
+                </span>
+                <span className="px-2 py-0.5 text-[10px] font-label bg-primary/10 text-primary border border-primary/20 rounded uppercase tracking-wider">
+                  {project.role}
+                </span>
+              </div>
+              <DialogTitle className="font-headline text-3xl sm:text-4xl font-bold tracking-tight leading-tight">
                 {project.title}
               </DialogTitle>
               <DialogDescription className="text-outline text-sm leading-relaxed">
