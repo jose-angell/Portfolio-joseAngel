@@ -92,6 +92,7 @@ export const translations = {
       projectItems: [
       {
         title: "Event Resource Reservation App",
+        detailId: "event-reservation",
         description: "Plataforma de reserva de recursos para eventos con backend desarrollado en .NET 8. Implementa una API REST con autenticación y autorización mediante JWT y ASP.NET Core Identity, persistencia con PostgreSQL y Entity Framework Core, reglas de disponibilidad por rango de fechas, logging con Serilog, Docker y pruebas unitarias sobre dominio y casos de uso.",
         imageUrl: layoutBookit,
         imageAlt: "Modern dashboard interface for resource management",
@@ -101,6 +102,7 @@ export const translations = {
       },
       {
         title: "WorkshopAdmin",
+        detailId: "workshop-admin",
         description: "Sistema full stack para la gestión de talleres técnicos desarrollado con .NET 10 y Blazor WebAssembly. Permite administrar clientes, equipos, órdenes de servicio e inventario, incorporando reglas de transición de estados, control de stock, autenticación JWT y persistencia con PostgreSQL mediante Entity Framework Core dentro de una arquitectura modular por capas.",
         imageUrl: layoutWorkshopAdmin,
         imageAlt: "Dashboard de gestión de talleres y servicios",
@@ -110,6 +112,7 @@ export const translations = {
       },
       {
         title: "ProcureFlow",
+        detailId: "procureflow",
         description: "Sistema full stack para gestionar solicitudes internas de compra y sus aprobaciones. Desarrollado con .NET 10, ASP.NET Core y React con TypeScript. Implementa Clean Architecture, modelado de dominio, reglas de transición de estados, autenticación JWT, autorización por roles y departamentos, persistencia con PostgreSQL y pruebas automatizadas.",
         imageUrl: procureFlowLoging,
         imageAlt: "Interfaz de inicio de sesión de ProcureFlow",
@@ -351,6 +354,7 @@ export const translations = {
       projectItems: [
       {
         title: "Event Resource Reservation App",
+        detailId: "event-reservation",
         description: "Resource reservation platform for events with a backend built on .NET 8. It provides REST APIs with JWT and ASP.NET Core Identity authentication and authorization, PostgreSQL persistence with Entity Framework Core, date-range availability rules, structured logging with Serilog, Docker-based local setup, and unit tests covering domain rules and application use cases.",
         imageUrl: layoutBookit,
         imageAlt: "Modern dashboard interface for resource management",
@@ -360,6 +364,7 @@ export const translations = {
       },
       {
         title: "WorkshopAdmin",
+        detailId: "workshop-admin",
         description: "Full-stack management system for technical workshops built with .NET 10 and Blazor WebAssembly. It manages customers, equipment, service orders, and inventory while enforcing workflow state transitions, stock rules, JWT authentication, and PostgreSQL persistence through Entity Framework Core within a modular layered architecture.",
         imageUrl: layoutWorkshopAdmin,
         imageAlt: "Workshop and service management dashboard",
@@ -369,6 +374,7 @@ export const translations = {
       },
       {
         title: "ProcureFlow",
+        detailId: "procureflow",
         description: "Full-stack application for managing internal purchase requests and approval workflows. Built with .NET 10, ASP.NET Core, React, and TypeScript. Features Clean Architecture, domain modeling, workflow state transitions, JWT authentication, role- and department-based authorization, PostgreSQL persistence, and automated testing.",
         imageUrl: procureFlowLoging,
         imageAlt: "ProcureFlow login interface",

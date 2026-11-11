@@ -11,7 +11,10 @@ interface ProjectCardProps {
   technologies: string[];
   projectUrl?: string;
   sourceCodeUrl?: string;
+  onSelect?: () => void;
 }
+
+const stopPropagation = (event: React.SyntheticEvent) => event.stopPropagation();
 
 export function ProjectCard({
   title,
@@ -21,11 +24,31 @@ export function ProjectCard({
   technologies,
   projectUrl,
   sourceCodeUrl,
+  onSelect,
 }: ProjectCardProps) {
   const hasProjectUrl = Boolean(projectUrl?.trim() && projectUrl.trim() !== "#");
+  const interactive = onSelect
+    ? {
+        role: "button",
+        tabIndex: 0,
+        onClick: onSelect,
+        onKeyDown: (event: React.KeyboardEvent) => {
+          if (event.target !== event.currentTarget) return;
+          if (event.key === "Enter" || event.key === " ") {
+            event.preventDefault();
+            onSelect();
+          }
+        },
+      }
+    : {};
 
   return (
-    <div className="group flex flex-col h-full">
+    <div
+      {...interactive}
+      className={`group flex flex-col h-full ${
+        onSelect ? "cursor-pointer outline-none focus-visible:ring-2 focus-visible:ring-primary rounded-xl" : ""
+      }`}
+    >
       {/* Contenedor de la Imagen */}
       <div className="relative overflow-hidden rounded-xl mb-6 bg-surface-container-high border border-white/5 aspect-video flex items-center justify-center">
         <img
@@ -39,9 +62,9 @@ export function ProjectCard({
       {/* Tecnologías usando Badge de shadcn */}
       <div className="flex flex-wrap gap-2 mb-4">
         {technologies.map((tech) => (
-          <Badge 
-            key={tech} 
-            variant="outline" 
+          <Badge
+            key={tech}
+            variant="outline"
             className="bg-white/5 border-white/10 font-label text-[10px] text-outline uppercase tracking-wider rounded-full px-3 py-1"
           >
             {tech}
@@ -57,6 +80,8 @@ export function ProjectCard({
             href={projectUrl}
             target="_blank"
             rel="noopener noreferrer"
+            onClick={stopPropagation}
+            onKeyDown={stopPropagation}
             className="text-primary hover:text-white transition-colors"
           >
             <span className="material-symbols-outlined text-xl">open_in_new</span>
@@ -72,11 +97,21 @@ export function ProjectCard({
       {/* Botón de Código Fuente usando Button de shadcn */}
       {sourceCodeUrl && (
         <div className="mt-auto">
-          <Button variant="link" className="p-0 h-auto font-label text-sm text-tertiary hover:text-tertiary/80 flex items-center gap-2" >
-            <a href={sourceCodeUrl} target="_blank" rel="noopener noreferrer">
-              <span className="material-symbols-outlined text-lg text-tertiary font-bold">code</span> 
-              Source Code
-            </a>
+          <Button
+            variant="link"
+            className="p-0 h-auto font-label text-sm text-tertiary hover:text-tertiary/80 flex items-center gap-2"
+            render={
+              <a
+                href={sourceCodeUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                onClick={stopPropagation}
+                onKeyDown={stopPropagation}
+              />
+            }
+          >
+            <span className="material-symbols-outlined text-lg text-tertiary font-bold">code</span>
+            Source Code
           </Button>
         </div>
       )}
