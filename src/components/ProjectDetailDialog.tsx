@@ -104,28 +104,55 @@ export function ProjectDetailDialog({ project, projectIndex, labels, onClose }: 
 
             <ProjectGallery key={project.id} project={project} />
 
+            {project.stats && project.stats.length > 0 && (
+              <div className="grid grid-cols-2 sm:grid-cols-4 gap-3">
+                {project.stats.map((stat) => (
+                  <div
+                    key={stat.label}
+                    className="p-4 rounded-lg bg-surface-container-high/40 border border-outline-variant/15"
+                  >
+                    <span className="block font-label text-[11px] text-outline uppercase tracking-wider mb-1">
+                      {stat.label}
+                    </span>
+                    <span className="font-headline text-xl font-bold text-on-surface">{stat.value}</span>
+                  </div>
+                ))}
+              </div>
+            )}
+
             <div>
-              <h4 className="font-label text-xs text-outline uppercase mb-3">{labels.highlights}</h4>
-              <ul className="space-y-2 text-sm text-on-surface">
+              <h3 className="font-label text-xs uppercase tracking-widest text-primary mb-4 flex items-center gap-2">
+                <span className="material-symbols-outlined text-sm text-primary">account_tree</span>
+                {labels.highlights}
+              </h3>
+              <ul className="space-y-3 text-sm text-on-surface-variant">
                 {project.highlights.map((highlight) => (
-                  <li key={highlight} className="flex gap-2">
-                    <span className="text-tertiary font-label">&gt;</span>
-                    {highlight}
+                  <li
+                    key={highlight}
+                    className="flex items-start gap-3 p-3 rounded-lg bg-surface-container-high/20 border border-outline-variant/10 hover:border-primary/30 transition-colors"
+                  >
+                    <span className="font-label text-tertiary font-bold mt-0.5">&gt;</span>
+                    <span>{highlight}</span>
                   </li>
                 ))}
               </ul>
             </div>
 
-            <div className="flex flex-wrap gap-2">
-              {project.technologies.map((tech) => (
-                <Badge
-                  key={tech}
-                  variant="outline"
-                  className="bg-transparent border-white/20 font-label text-[10px] text-outline uppercase rounded"
-                >
-                  {tech}
-                </Badge>
-              ))}
+            <div>
+              <h3 className="font-label text-xs uppercase tracking-widest text-outline mb-3">
+                {labels.techStack}
+              </h3>
+              <div className="flex flex-wrap gap-2">
+                {project.technologies.map((tech) => (
+                  <Badge
+                    key={tech}
+                    variant="outline"
+                    className="px-3 py-1 h-auto bg-surface-container-high border-primary/20 font-label text-xs text-primary rounded"
+                  >
+                    {tech}
+                  </Badge>
+                ))}
+              </div>
             </div>
           </div>
         )}
