@@ -1,6 +1,6 @@
 # SPEC 02 — Rediseño del modal de detalle de proyectos
 
-> **Estado:** aprobado
+> **Estado:** implementado
 > **Depende de:** SPEC 01
 > **Fecha:** 2026-11-10
 > **Objetivo:** Rediseñar `ProjectDetailDialog` con el estilo terminal de `design/modalProjects.html` y abrirlo también desde las tarjetas de la sección Proyectos del home.
@@ -98,22 +98,22 @@ Convenciones:
 
 ## Criterios de aceptación
 
-- [ ] `npm run build` y `npm run lint` terminan sin errores.
-- [ ] El modal abierto desde `#/projects` muestra la cabecera `[PROJECT_ID: PRJ-00N] // {statusLabel}` con el número correcto para cada proyecto.
-- [ ] El modal muestra los badges `context` y `role`, el título y la descripción extendida.
-- [ ] La barra del marco de ventana muestra `{id}.app` y las categorías del proyecto.
-- [ ] Event Reservation, WorkshopAdmin y ProcureFlow muestran la grilla de 4 métricas; Vigencia y Reintegro no la muestran.
-- [ ] Vigencia y Reintegro muestran el ícono en el marco de ventana, sin imagen rota, y `privateLabel` en el footer.
-- [ ] Los highlights se ven como tarjetas con `>` y el stack técnico como badges.
-- [ ] No hay X en la esquina; el modal se cierra con Cerrar, Esc y click en el overlay.
-- [ ] Al cerrar, el foco vuelve a la tarjeta que lo abrió (en `#/projects` y en el home).
-- [ ] "Ver código" abre el repositorio en una pestaña nueva; "Ver demo" solo aparece si `projectUrl` existe y no es `#`.
-- [ ] En el home, click o Enter sobre una tarjeta abre el modal del proyecto correspondiente.
-- [ ] En el home, click en "Source Code" o en `open_in_new` abre el enlace y **no** abre el modal.
-- [ ] Con el modal abierto, cambiar ES/EN traduce todo su contenido, incluidas las métricas.
-- [ ] A 375px de ancho el modal no tiene scroll horizontal, la grilla de métricas queda en 2 columnas y el footer apila sus elementos.
-- [ ] Con contenido largo (ProcureFlow) el cuerpo hace scroll y la cabecera y el footer quedan fijos.
-- [ ] No aparecen las claves `modalRole` ni `modalContext` en `translations.tsx`.
+- [x] `npm run build` y `npm run lint` terminan sin errores.
+- [x] El modal abierto desde `#/projects` muestra la cabecera `[PROJECT_ID: PRJ-00N] // {statusLabel}` con el número correcto para cada proyecto.
+- [x] El modal muestra los badges `context` y `role`, el título y la descripción extendida.
+- [x] La barra del marco de ventana muestra `{id}.app` y las categorías del proyecto.
+- [x] Event Reservation, WorkshopAdmin y ProcureFlow muestran la grilla de 4 métricas; Vigencia y Reintegro no la muestran.
+- [x] Vigencia y Reintegro muestran el ícono en el marco de ventana, sin imagen rota, y `privateLabel` en el footer.
+- [x] Los highlights se ven como tarjetas con `>` y el stack técnico como badges.
+- [x] No hay X en la esquina; el modal se cierra con Cerrar, Esc y click en el overlay.
+- [x] Al cerrar, el foco vuelve a la tarjeta que lo abrió (en `#/projects` y en el home).
+- [x] "Ver código" abre el repositorio en una pestaña nueva; "Ver demo" solo aparece si `projectUrl` existe y no es `#`.
+- [x] En el home, click o Enter sobre una tarjeta abre el modal del proyecto correspondiente.
+- [x] En el home, click en "Source Code" o en `open_in_new` abre el enlace y **no** abre el modal.
+- [x] Con el modal abierto, cambiar ES/EN traduce todo su contenido, incluidas las métricas.
+- [x] A 375px de ancho el modal no tiene scroll horizontal, la grilla de métricas queda en 2 columnas y el footer apila sus elementos.
+- [x] Con contenido largo (ProcureFlow) el cuerpo hace scroll y la cabecera y el footer quedan fijos.
+- [x] No aparecen las claves `modalRole` ni `modalContext` en `translations.tsx`.
 
 ## Decisiones
 
