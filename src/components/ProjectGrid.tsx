@@ -1,9 +1,18 @@
+import { useState } from "react";
 import { ProjectCard } from "./ProjectCard";
+import { ProjectDetailDialog } from "./ProjectDetailDialog";
 import { useLanguage } from "../context/LanguageContext";
+import { translations } from "../i18n/translations";
+
 export default function ProjectGrid() {
 
-  const { t } = useLanguage();
-  const projects = t('projects', 'projectItems') as unknown as { title: string; description: string; imageUrl: string; imageAlt: string; technologies: string[]; projectUrl: string; sourceCodeUrl: string }[];
+  const { t, language } = useLanguage();
+  const projects = t('projects', 'projectItems') as unknown as { detailId?: string; title: string; description: string; imageUrl: string; imageAlt: string; technologies: string[]; projectUrl: string; sourceCodeUrl: string }[];
+  const page = translations[language].projectsPage;
+  const [selectedId, setSelectedId] = useState<string | null>(null);
+  const selectedProject = page.items.find((item) => item.id === selectedId) ?? null;
+  const hasDetail = (detailId?: string) => page.items.some((item) => item.id === detailId);
+
   return (
     <section className="max-w-7xl mx-auto px-6" id="projects">
       <div className="flex flex-col md:flex-row justify-between items-end mb-16 gap-6">
@@ -31,9 +40,26 @@ export default function ProjectGrid() {
             technologies={project.technologies}
             projectUrl={project.projectUrl}
             sourceCodeUrl={project.sourceCodeUrl}
+            onSelect={
+              hasDetail(project.detailId) ? () => setSelectedId(project.detailId ?? null) : undefined
+            }
           />
         ))}
       </div>
+
+      <ProjectDetailDialog
+        project={selectedProject}
+        projectIndex={page.items.findIndex((item) => item.id === selectedId)}
+        labels={{
+          highlights: page.modalHighlights,
+          techStack: page.modalTechStack,
+          viewCode: page.viewCode,
+          viewDemo: page.viewDemo,
+          privateLabel: page.privateLabel,
+          close: page.modalClose,
+        }}
+        onClose={() => setSelectedId(null)}
+      />
     </section>
   );
 }
