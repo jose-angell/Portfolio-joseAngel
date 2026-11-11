@@ -42,6 +42,7 @@ export const TopNavBar = ({ route }: { route: Route }) => {
         </div>
 
         <Button render={<a href="#footer" className="text-black" />}
+          nativeButton={false}
           className="bg-primary text-tertiary font-label text-xs uppercase tracking-widest font-bold hover:scale-105 active:scale-95 transition-transform rounded-lg px-5 py-2"
         >
           Hire Me

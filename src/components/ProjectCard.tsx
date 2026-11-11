@@ -99,6 +99,7 @@ export function ProjectCard({
         <div className="mt-auto">
           <Button
             variant="link"
+            nativeButton={false}
             className="p-0 h-auto font-label text-sm text-tertiary hover:text-tertiary/80 flex items-center gap-2"
             render={
               <a

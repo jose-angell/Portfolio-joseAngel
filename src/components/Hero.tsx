@@ -35,6 +35,7 @@ export const Hero = () => {
         <div className="flex flex-wrap items-center gap-4">
           <Button
           render={<a href="#projects" className="text-black"/>}
+          nativeButton={false}
           className="bg-primary text-on-primary hover:shadow-[0_0_30px_-5px_rgba(174,198,255,0.4)] transition-all px-8 py-6 text-base font-bold tracking-wide rounded-lg">
             {t('hero', 'btnProjects')}
           </Button>
@@ -42,6 +43,7 @@ export const Hero = () => {
           {/* Botón secundario con icono para el CV */}
           <Button
           render={<a href={cvPdf} target="_blank" rel="noopener noreferrer"/>}
+          nativeButton={false}
            variant="outline" className="border-outline-variant text-on-surface px-8 py-6 text-base hover:bg-white/5 transition-colors group rounded-lg">
             {t('hero', 'btnCV')}
             <span className="material-symbols-outlined ml-2 text-lg group-hover:translate-y-1 transition-transform">

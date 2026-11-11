@@ -184,12 +184,14 @@ export function ProjectsPage() {
         <div className="flex flex-wrap justify-center gap-4">
           <Button
             render={<a href="#footer" />}
+            nativeButton={false}
             className="bg-primary text-background px-8 py-6 font-headline font-bold uppercase tracking-widest text-xs active:scale-95 transition-transform rounded-lg"
           >
             {page.ctaConnect}
           </Button>
           <Button
             render={<a href={cvPdf} target="_blank" rel="noopener noreferrer" />}
+            nativeButton={false}
             variant="outline"
             className="border-white/20 text-on-surface px-8 py-6 font-headline font-bold uppercase tracking-widest text-xs hover:bg-white/5 active:scale-95 transition-transform rounded-lg"
           >
