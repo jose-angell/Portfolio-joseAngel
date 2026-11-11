@@ -200,10 +200,10 @@ export function ProjectsPage() {
 
       <ProjectDetailDialog
         project={selectedProject}
+        projectIndex={page.items.findIndex((project) => project.id === selectedId)}
         labels={{
-          role: page.modalRole,
-          context: page.modalContext,
           highlights: page.modalHighlights,
+          techStack: page.modalTechStack,
           viewCode: page.viewCode,
           viewDemo: page.viewDemo,
           privateLabel: page.privateLabel,
